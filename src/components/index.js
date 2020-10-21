@@ -96,7 +96,7 @@ export default class Index extends React.Component {
             "הגדרות": () => null,
             "רשימת לקוחות": () => null,
             "דפי חשבון": () => null,
-            "חיוב חדש": () => (linkObj.params) ? this.connectClientsTo1Bill(this.props.bills.filter((item) => item.id == linkObj.params), this.props.billed) : null,
+            "חיוב חדש": () => (linkObj.params && linkObj.params.opCode == "clientNum") ? linkObj.params.clientNum : (linkObj.params && linkObj.params.opCode == "chargeNum")?  this.connectClientsTo1Bill(this.props.bills.filter((item) => item.id == linkObj.params.chargeNum), this.props.billed) : null,
             "יצירת מסב": () => null,
             "עדכון מסב": () => (linkObj.params) ? {"billData":this.getReuqstPay(linkObj.params),"msbEntery":this.props.msbIndex.filter((item) => item.id == linkObj.params)}: null
         }
@@ -106,8 +106,10 @@ export default class Index extends React.Component {
         this.scrollToRef();
     }
     getReuqstPay(fillter = 0) {
+        const notDebtFunc = (item)=> !item.debtTime;
         const fillterFunc = (fillter == 0)?((payed)=>{return !payed.isDone && payed.payed>0}):((payed)=>{return payed.isDone && payed.payed>0 && payed.msbId == fillter});
-        return this.props.billed.filter(fillterFunc).map((item) => {
+        
+        return this.props.billed.filter((item)=>fillterFunc(item) && notDebtFunc(item)).map((item) => {
             item["company"] = this.idToCustemoreName(this.props.custemores,item.custemorId)[1] //need valid
 
             const fatherBill = this.props.bills.filter((bill) => bill.id == item.FatherBillId);
@@ -144,7 +146,7 @@ export default class Index extends React.Component {
             "חברים מאקסל": <NewFriendByXls arrCustemores={this.props.custemores}></NewFriendByXls>,
             "הגדרות": <Settings></Settings>,
             "רשימת לקוחות": <FriendsList arrCustemores={this.props.custemores}></FriendsList>,
-            "דפי חשבון": <Accuonts></Accuonts>,
+            "דפי חשבון": <Accuonts msbIndex={this.props.msbIndex} arrCustemores={this.props.custemores} arrbilled={this.props.billed}></Accuonts>,
             "חיוב חדש": <NewCharge update_charge={(data) => this.props.update_charge(data)} update_bill={(data) => this.props.update_bill(data)} arrCustemores={this.props.custemores}></NewCharge>,
             "יצירת מסב": <NewMsb update_msb={(data) => this.props.update_msb(data)} update_bill={(data) => this.props.update_bill(data)} arrCustemoreBills={this.getReuqstPay()}></NewMsb>,
             "עדכון מסב": <UpdateMsb update_msb={(data) => this.props.update_msb(data)} update_bill={(data) => this.props.update_bill(data)} arrCustemoreBills={this.getReuqstPay()}></UpdateMsb>

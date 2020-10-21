@@ -14,13 +14,17 @@ export default class Index extends React.Component {
       filtor: ""
     };
     let id = this.props.edit;
-    if(id && !('length' in id) && id.id){
+    if(typeof(id)== "object" && id && !('length' in id) && id.id){
       this.state["id"] = id.id;
       this.state["notes"] = id.notes;
       this.state["date"] = id.date;
       this.state["price"] = id.price;
       this.state["subject"] = id.subject;
       this.state["custemors"] = JSON.parse(JSON.stringify( id.custemors));
+    }
+
+    if(typeof(id)=="number"){
+      this.state["custemors"] = [id];
     }
   }
   static contextType = functionsContext;
@@ -34,7 +38,7 @@ export default class Index extends React.Component {
       notes: s.notes
     });
     s.custemors.map((id)=>this.props.update_bill(
-      {"transaId": s.id+"-"+id+"_0",
+      {"transaId": s.id+"-"+id+"*1", // optional for take many piceses
       "FatherBillId": s.id,
       "msbId": -1,
       "custemorId": id,

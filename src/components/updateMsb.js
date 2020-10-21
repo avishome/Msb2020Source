@@ -142,7 +142,7 @@ export default class MyTable extends React.Component {
 
             item["date"] = (new Date()).getTime(); // date update
             item["payed"] = 0; // changed
-            item["paidway"] = "id of new chrage"
+            item["paidway"] = item["transaId"] + "_0"
             item["reason"] = this.state.reason[item["transaId"]]
             return item;
         }).map((item) => (this.props.update_bill(item)) ? item : { "payed": 0 }).map((item) => item.payed).reduce((a, b) => a + b, 0);

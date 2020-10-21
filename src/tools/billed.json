@@ -1,6 +1,6 @@
 [
     {
-    "transaId":123432,
+    "transaId":"3-12345*1",
     "FatherBillId": 3,
     "msbId": -1,
     "custemorId": 12345,
@@ -11,7 +11,7 @@
     "date": null
     },
     {
-        "transaId":123132,
+        "transaId":"4-12345*1",
         "FatherBillId": 4,
         "msbId": -1,
         "custemorId": 12345,
