@@ -1,0 +1,101 @@
+.tooltip .tooltip-text, .searchFather .tooltip-text {
+    display: none;
+    position: absolute;
+    left: 0px;
+
+  }
+
+  /**      text-align: center;
+    padding: 2px 6px;
+    position: absolute;
+    z-index: 100;
+    overflow: scroll;
+    max-height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;**/
+  .tooltip:active .tooltip-text {
+    display: block;
+  }
+  
+  .searchFather:focus-within .tooltip-text {
+    display: block;
+    position: absolute;
+    bottum: 2px;
+  }
+
+  .searchFather:focus-within .search{
+    width: 16rem;
+  }
+
+  .tooltip .tooltip-text:hover {
+    display: block;
+  }
+
+  .noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+  }
+
+  .listBar {
+    position: fixed;
+    width: -webkit-fill-available;
+  }
+
+.fadeOut{
+  animation : fadeout 0.2s linear forwards;
+}
+@keyframes fadeout{
+  99%{
+    opacity : 0;
+    height : initial;
+    position: initial;
+  }
+  100%{
+    opacity : 0;
+    height : 0;
+    overflow: hidden;
+  }
+}
+.fadeIn{
+  animation : fadein 0.4s linear forwards;
+}
+@keyframes fadein{
+  0%{
+    opacity : 0;
+    height : initial;
+  }
+  50%{
+    opacity : 0;
+    height : initial;
+  }
+  100%{
+    opacity : 1;
+  }
+}
+
+.group td{
+  position: sticky;
+  top: 0; /* Don't forget this, required for the stickiness */
+  background-color: #e2e8f0;
+}
+html {
+  scroll-behavior: smooth;
+}
+.search:focus{
+  width: 16rem;
+  transition: width 1s;
+}
+.search{
+  transition: width 1s;
+}

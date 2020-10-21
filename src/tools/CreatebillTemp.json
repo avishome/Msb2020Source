@@ -1,0 +1,1792 @@
+[
+  {
+    "company": "EARTHPURE",
+    "payed": 1726,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2018-04-20T12:02:16",
+    "about": "laborum amet pariatur id occaecat tempor cupidatat in nostrud cillum",
+    "FatherBillId": "a907d246-f01a-4ea4-b6eb-c2267f62c977",
+    "transaId": "b4651bb5-14f2-4239-b482-eda0ca7dc497",
+    "isDone": "active"
+  },
+  {
+    "company": "ENTROFLEX",
+    "payed": 1123.87,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2019-01-13T03:43:22",
+    "about": "cupidatat minim esse cillum anim ex occaecat ipsum minim Lorem",
+    "FatherBillId": "ea11c2d8-6f7d-4f55-b3ff-3af9c9d59447",
+    "transaId": "057db105-b1e3-48da-80f8-cc5deca02c12",
+    "isDone": "notactive"
+  },
+  {
+    "company": "ANACHO",
+    "payed": 910.71,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2014-11-13T08:33:32",
+    "about": "ad nostrud consectetur occaecat labore velit do aute proident anim",
+    "FatherBillId": "8391e655-2e61-447e-98c6-0579a7c7b110",
+    "transaId": "3645c454-d658-40f8-8634-8077a2769244",
+    "isDone": "notactive"
+  },
+  {
+    "company": "IMPERIUM",
+    "payed": 3821.68,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2019-04-24T05:38:30",
+    "about": "Lorem do eiusmod excepteur et Lorem quis commodo reprehenderit cupidatat",
+    "FatherBillId": "02d1b00c-af7a-484e-a292-e717e43b352f",
+    "transaId": "3060f3df-806b-4157-a344-9faaf01f37c9",
+    "isDone": "active"
+  },
+  {
+    "company": "PULZE",
+    "payed": 1563.08,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2014-02-08T04:29:47",
+    "about": "eiusmod incididunt nisi veniam ea voluptate commodo laboris deserunt nisi",
+    "FatherBillId": "0b2ad529-b135-4c65-a04f-f6599136f19b",
+    "transaId": "dcfc1c2e-cfa8-437a-94be-27bfd0efc712",
+    "isDone": "active"
+  },
+  {
+    "company": "IRACK",
+    "payed": 3919.57,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2015-02-21T10:46:05",
+    "about": "dolore nulla ea esse aute culpa reprehenderit labore culpa officia",
+    "FatherBillId": "8b03b70f-bf6e-4e64-9988-0c8ccdda8f06",
+    "transaId": "3c751845-a340-4789-b9bb-8d1d5aacba62",
+    "isDone": "notactive"
+  },
+  {
+    "company": "DIGIPRINT",
+    "payed": 751.36,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2018-07-07T01:49:01",
+    "about": "magna exercitation irure irure Lorem pariatur ipsum reprehenderit Lorem ipsum",
+    "FatherBillId": "26e78c24-f344-4b66-b293-f0d5ee702ca4",
+    "transaId": "a9a947a0-7989-4069-881f-4e022efdcea5",
+    "isDone": "notactive"
+  },
+  {
+    "company": "EXOתשלום חודשי קבוע",
+    "payed": 1547.2,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2020-06-11T11:27:32",
+    "about": "occaecat nisi nulla aliquip ea fugiat dolor anim culpa aliquip",
+    "FatherBillId": "abacb4c1-ff8a-45f4-9dba-8f80b8bd19eb",
+    "transaId": "573b8409-88b2-4d0b-891f-62276ce32f8b",
+    "isDone": "notactive"
+  },
+  {
+    "company": "GLASSTEP",
+    "payed": 360.36,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2019-02-19T12:43:32",
+    "about": "pariatur elit aliquip exercitation officia et voluptate ullamco cillum est",
+    "FatherBillId": "33c107ed-1b6d-4f85-9a90-63903d412a4c",
+    "transaId": "b7d9a88e-779e-442d-8fe1-0dce84635fc9",
+    "isDone": "notactive"
+  },
+  {
+    "company": "OTHERSIDE",
+    "payed": 3849.3,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2019-12-26T12:58:41",
+    "about": "cupidatat aliqua deserunt ut consequat sint commodo esse amet ut",
+    "FatherBillId": "3b95c588-cb6f-4f86-bb9e-d287abbb98f8",
+    "transaId": "8f01e9a8-4d4d-4a69-9846-97084a89e20e",
+    "isDone": "notactive"
+  },
+  {
+    "company": "CENTREGY",
+    "payed": 3775.45,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2016-09-03T03:39:04",
+    "about": "culpa dolor consequat ea et tempor elit mollit occaecat non",
+    "FatherBillId": "f8b1f24f-83cd-4d63-87a7-0d8ab8486378",
+    "transaId": "08496379-d97f-4e0c-a3ce-b66d356d9e81",
+    "isDone": "notactive"
+  },
+  {
+    "company": "KOZGENE",
+    "payed": 2189.25,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2018-05-24T09:00:29",
+    "about": "velit nulla quis excepteur Lorem anim nostrud eu occaecat esse",
+    "FatherBillId": "8a7ad065-87ab-419f-9e10-ad0b139910ee",
+    "transaId": "ee9d2619-ea61-4623-80ae-d8e39b3ff627",
+    "isDone": "active"
+  },
+  {
+    "company": "ZILLAR",
+    "payed": 2693.92,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2017-04-03T09:09:29",
+    "about": "eiusmod reprehenderit officia officia mollit culpa amet sint amet proident",
+    "FatherBillId": "d35516cc-7740-49e3-8e55-d8b1a9cc7af6",
+    "transaId": "0d4796f5-179b-4ace-8870-87c9004883f0",
+    "isDone": "notactive"
+  },
+  {
+    "company": "ZENSOR",
+    "payed": 2378.6,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2018-12-05T06:10:29",
+    "about": "sit elit qui Lorem aliqua excepteur enim laboris excepteur laboris",
+    "FatherBillId": "19061146-e0f8-4948-8cee-49d9afce6052",
+    "transaId": "690610f9-b570-40e6-9e2c-0dc0fdb74049",
+    "isDone": "active"
+  },
+  {
+    "company": "UNQ",
+    "payed": 1127.33,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2018-06-21T03:10:51",
+    "about": "elit irure est adipisicing culpa proident laborum ut dolore dolore",
+    "FatherBillId": "9fdf4c67-afd2-42a9-ac1c-91ebfa1258ab",
+    "transaId": "80ccfc66-742b-43a2-abc9-1c7eb1d4a9b8",
+    "isDone": "notactive"
+  },
+  {
+    "company": "KOFFEE",
+    "payed": 171.56,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2014-09-14T07:05:48",
+    "about": "consectetur consequat amet enim consectetur ut laborum aute pariatur pariatur",
+    "FatherBillId": "a79e50d6-c722-42b1-a2d0-f3c7ea00b5fc",
+    "transaId": "8374cceb-355a-4fce-baa1-aaa1b5010dec",
+    "isDone": "notactive"
+  },
+  {
+    "company": "COMVEYER",
+    "payed": 3571.58,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2018-05-05T05:42:07",
+    "about": "id eu mollit et non in incididunt cillum nisi proident",
+    "FatherBillId": "2eba876e-53c1-4892-b0a9-bba9b3a60e37",
+    "transaId": "d8df7c30-7072-450b-9278-4abac51f6294",
+    "isDone": "notactive"
+  },
+  {
+    "company": "EXPOSA",
+    "payed": 1899.74,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2016-02-03T06:48:04",
+    "about": "est tempor aliquip sit tempor non eu mollit incididunt fugiat",
+    "FatherBillId": "e9c357be-56fa-49c3-991e-8ed5843f25dc",
+    "transaId": "72c953e6-ade9-4a8d-b929-3288a0af2a1c",
+    "isDone": "notactive"
+  },
+  {
+    "company": "EXOPLODE",
+    "payed": 1717.98,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2016-06-05T08:03:27",
+    "about": "elit duis fugiat tempor do magna officia cupidatat eu adipisicing",
+    "FatherBillId": "c680723d-a836-4ab5-a644-7d9360d725b3",
+    "transaId": "ba947271-44ba-4ffa-95c6-c90f46717c1b",
+    "isDone": "notactive"
+  },
+  {
+    "company": "KIDSTOCK",
+    "payed": 2969.51,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2017-03-22T05:41:15",
+    "about": "nostrud pariatur nisi anim deserunt nostrud labore enim in amet",
+    "FatherBillId": "6b55b0eb-4b7d-4e1c-9f05-249cda33fe71",
+    "transaId": "ae835367-7da1-44eb-ba96-4f138fced58b",
+    "isDone": "active"
+  },
+  {
+    "company": "EVIDENDS",
+    "payed": 641.04,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2017-04-24T09:36:57",
+    "about": "aliqua in et nostrud ex eiusmod adipisicing fugiat irure culpa",
+    "FatherBillId": "595a6bcc-abb2-4e02-a760-11b2338e46ac",
+    "transaId": "3b520f99-7aad-475c-b7f1-1a87f13ab8bc",
+    "isDone": "notactive"
+  },
+  {
+    "company": "NEBULEAN",
+    "payed": 3384.36,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2017-04-05T09:14:46",
+    "about": "dolore aliqua culpa do eu dolore incididunt anim eu minim",
+    "FatherBillId": "a0921952-0b34-4f19-93d8-6347ae52f9ed",
+    "transaId": "cb3b2dc3-97d3-46a2-af73-1f88add08201",
+    "isDone": "active"
+  },
+  {
+    "company": "VIASIA",
+    "payed": 184.98,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2018-12-08T04:07:29",
+    "about": "officia elit deserunt nostrud quis duis qui tempor nulla occaecat",
+    "FatherBillId": "623dfe23-5bd8-4433-bb66-44d3e9b110ff",
+    "transaId": "66a308d3-c884-4a3c-9cdf-c156140e0fdc",
+    "isDone": "active"
+  },
+  {
+    "company": "ELITA",
+    "payed": 1624.06,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2017-07-20T01:52:00",
+    "about": "sunt sit ad quis veniam excepteur voluptate aute esse Lorem",
+    "FatherBillId": "85d6bbe7-6ca6-44e4-97fd-23eee14234cc",
+    "transaId": "f2f289e5-7782-4893-89ee-e6fba2516a26",
+    "isDone": "active"
+  },
+  {
+    "company": "HAIRPORT",
+    "payed": 824.28,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2020-01-10T10:50:50",
+    "about": "do proident commodo aliqua ad pariatur eu ipsum non do",
+    "FatherBillId": "dfadf537-0f49-42df-8d24-a2b616ea4ebe",
+    "transaId": "2a826758-ecba-4f54-8fb8-29cf3b1a3d44",
+    "isDone": "active"
+  },
+  {
+    "company": "BALUBA",
+    "payed": 3469.14,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2020-08-01T01:36:00",
+    "about": "est eu dolor cillum non magna nulla deserunt excepteur consequat",
+    "FatherBillId": "1d2233d3-d150-4158-bab6-a3eade90006d",
+    "transaId": "612b773d-d77b-48f8-a2e6-ad43dbbe35df",
+    "isDone": "active"
+  },
+  {
+    "company": "APEXTRI",
+    "payed": 1088.79,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2015-07-16T06:10:46",
+    "about": "veniam proident non et duis et irure nisi pariatur elit",
+    "FatherBillId": "6393f0f1-278c-4d21-a359-5b2f99330d11",
+    "transaId": "a39061fd-6774-4cf1-9544-64faf8d883ae",
+    "isDone": "notactive"
+  },
+  {
+    "company": "COMTEXT",
+    "payed": 2935.95,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2015-03-10T11:42:40",
+    "about": "officia nulla laboris consequat est eiusmod do ea esse voluptate",
+    "FatherBillId": "25fa9729-c98f-4fc9-8526-b8b7e7ec68ed",
+    "transaId": "3e8125f0-8ae3-4d00-b2e2-b28716b86917",
+    "isDone": "active"
+  },
+  {
+    "company": "QUANTALIA",
+    "payed": 2199.43,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2017-09-03T05:49:51",
+    "about": "pariatur aliqua exercitation ut tempor mollit nostrud dolore do voluptate",
+    "FatherBillId": "17990083-df31-455c-b09a-88c1a5cd4e1a",
+    "transaId": "c86d38d8-7448-47ef-b7c1-48f71f1ef19a",
+    "isDone": "notactive"
+  },
+  {
+    "company": "XINWARE",
+    "payed": 2564.68,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2014-11-24T06:50:53",
+    "about": "aliqua id quis qui voluptate laborum culpa culpa sit consectetur",
+    "FatherBillId": "99a3cb1c-c029-4a8b-b1fd-b409dfa8a5a1",
+    "transaId": "eb8b778c-d330-4988-bd27-a914029d1404",
+    "isDone": "notactive"
+  },
+  {
+    "company": "TELEQUIET",
+    "payed": 890.13,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2015-02-07T11:23:47",
+    "about": "elit velit cillum officia mollit ex occaecat aliqua sit commodo",
+    "FatherBillId": "80411afe-bbeb-406b-b0fd-9d383782f98e",
+    "transaId": "789decb2-91fe-44fd-838d-58f73af3e6bd",
+    "isDone": "notactive"
+  },
+  {
+    "company": "DEEPENDS",
+    "payed": 2011.7,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2017-02-26T05:05:14",
+    "about": "aliquip magna ullamco enim dolor anim labore cupidatat do eu",
+    "FatherBillId": "7dad78cf-d122-4db6-9b8a-c6eec7a25320",
+    "transaId": "195d41da-a2fd-4478-8c68-110f6afdc347",
+    "isDone": "notactive"
+  },
+  {
+    "company": "EYEWAX",
+    "payed": 2674.28,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2016-10-29T01:32:42",
+    "about": "exercitation deserunt reprehenderit duis consequat aliquip anim commodo aliquip reprehenderit",
+    "FatherBillId": "1e675910-f3dd-4c4d-89f7-7ba7e5b46b28",
+    "transaId": "5caaa739-ef2e-408f-8167-77a1f2dc77c8",
+    "isDone": "active"
+  },
+  {
+    "company": "ZAPPIX",
+    "payed": 181.77,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2014-10-25T09:13:35",
+    "about": "occaecat id elit ut cillum do do dolore amet magna",
+    "FatherBillId": "367e0bee-0265-49ce-94d4-17421b2c39fb",
+    "transaId": "8fd18f3d-f155-4e66-8610-31c31383638c",
+    "isDone": "notactive"
+  },
+  {
+    "company": "ISOSPHERE",
+    "payed": 2260.94,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2017-05-18T10:27:28",
+    "about": "officia veniam aute exercitation excepteur consectetur sint proident cillum ex",
+    "FatherBillId": "ac5dbc31-af25-4dab-b6cc-e11bf35c92e3",
+    "transaId": "691c1005-4809-419a-89b8-21ef592e6e84",
+    "isDone": "active"
+  },
+  {
+    "company": "SNOWPOKE",
+    "payed": 1593.73,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2016-11-18T12:05:36",
+    "about": "incididunt excepteur tempor enim aute ea excepteur mollit nostrud ullamco",
+    "FatherBillId": "6b1dee64-5c45-47c4-aa50-091df35afe8f",
+    "transaId": "92f99191-83c7-4981-8b6d-3ad1a9fa2be9",
+    "isDone": "notactive"
+  },
+  {
+    "company": "ENTALITY",
+    "payed": 3895.75,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2014-03-03T11:59:02",
+    "about": "commodo pariatur non excepteur ad excepteur ipsum mollit nulla tempor",
+    "FatherBillId": "970f19d0-7cf1-43d9-9b1a-19eff6aec10a",
+    "transaId": "4cbd3859-5ed7-42c5-9935-4cc4547199f3",
+    "isDone": "notactive"
+  },
+  {
+    "company": "ENVIRE",
+    "payed": 2160.06,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2020-06-30T03:34:13",
+    "about": "magna culpa commodo enim eu dolor nisi consectetur consequat aliqua",
+    "FatherBillId": "893daba6-17ca-44d9-85c0-89f0adeef969",
+    "transaId": "676b3f45-cd23-451e-802c-406435b54307",
+    "isDone": "active"
+  },
+  {
+    "company": "AVIT",
+    "payed": 1013.79,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2017-02-20T06:12:46",
+    "about": "dolore quis eiusmod laborum non elit sunt eiusmod non sint",
+    "FatherBillId": "490d29b8-4455-4420-9ba3-a3906c97b5f6",
+    "transaId": "3ca469e6-b0c5-462c-80b6-487844dfaff1",
+    "isDone": "notactive"
+  },
+  {
+    "company": "ROBOID",
+    "payed": 3998.86,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2016-11-01T10:33:20",
+    "about": "sint laboris ea culpa sunt ea Lorem est pariatur esse",
+    "FatherBillId": "9d04ecd9-1e53-49da-9441-6de71b7035e7",
+    "transaId": "f44635a9-d3ca-4b64-8491-3eff6454eb7c",
+    "isDone": "notactive"
+  },
+  {
+    "company": "HALAP",
+    "payed": 908.49,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2015-03-31T02:10:59",
+    "about": "non cupidatat incididunt sunt ipsum sint adipisicing consectetur exercitation exercitation",
+    "FatherBillId": "f4808883-c5b1-4552-870b-bcbd2b06832f",
+    "transaId": "598eb301-81ea-46cb-aa8f-b17cbe599be7",
+    "isDone": "notactive"
+  },
+  {
+    "company": "COMVEY",
+    "payed": 3364.12,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2019-04-09T04:01:59",
+    "about": "irure laboris mollit officia ex anim duis dolor excepteur reprehenderit",
+    "FatherBillId": "342743ad-6f05-4f81-859c-43c6d5fa1f6f",
+    "transaId": "12e8339a-6b1d-4c5a-92a4-d4f02421f4ee",
+    "isDone": "notactive"
+  },
+  {
+    "company": "PORTICO",
+    "payed": 538.83,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2018-07-10T12:42:57",
+    "about": "amet sit labore labore elit ipsum sunt laborum amet aliqua",
+    "FatherBillId": "58025afc-02fa-497e-bfbf-b48f6d49ea46",
+    "transaId": "766df76e-3c18-4209-83bb-f188e5734f43",
+    "isDone": "notactive"
+  },
+  {
+    "company": "GADTRON",
+    "payed": 2906.87,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2016-02-28T03:49:30",
+    "about": "ea est proident quis nulla qui anim sint amet deserunt",
+    "FatherBillId": "1574c21e-a11e-4924-9341-d8ba240f2881",
+    "transaId": "e67f7d56-62a8-449b-ad3a-56d4d4cca912",
+    "isDone": "active"
+  },
+  {
+    "company": "MOMENTIA",
+    "payed": 1865.43,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2019-12-14T09:51:54",
+    "about": "ex laboris pariatur nostrud proident sunt mollit irure laborum ex",
+    "FatherBillId": "045f601b-2474-4929-aa45-ccb8a9a93c32",
+    "transaId": "47a20b61-6548-407e-a30a-47781a7f176f",
+    "isDone": "notactive"
+  },
+  {
+    "company": "COLUMELLA",
+    "payed": 3603.58,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2019-05-16T08:55:06",
+    "about": "aliqua quis velit voluptate enim ad tempor id reprehenderit ullamco",
+    "FatherBillId": "dc5f2c9c-05f7-4f4e-9edc-fd6b33f61c17",
+    "transaId": "0dd38aef-09a4-4bb6-a4af-04d4465b433f",
+    "isDone": "notactive"
+  },
+  {
+    "company": "FARMEX",
+    "payed": 3655.7,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2020-03-09T03:26:09",
+    "about": "ipsum occaecat culpa sit fugiat consequat ipsum in id laborum",
+    "FatherBillId": "595cca22-e02d-4b76-a0d2-c3e10a9d2403",
+    "transaId": "baf2d6cc-80f1-44c4-9b69-8968a3f7afa6",
+    "isDone": "active"
+  },
+  {
+    "company": "NEWCUBE",
+    "payed": 1891.83,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2017-12-22T03:11:06",
+    "about": "est culpa do deserunt ea non minim sint consectetur deserunt",
+    "FatherBillId": "8b62bb17-3f66-48e7-a1a2-5e4ea5aefe92",
+    "transaId": "c874a855-2386-4e5f-a0e5-1c7b1440f4af",
+    "isDone": "active"
+  },
+  {
+    "company": "ZILCH",
+    "payed": 3145.6,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2016-04-20T05:28:48",
+    "about": "eiusmod mollit amet ullamco occaecat et laborum occaecat eiusmod nostrud",
+    "FatherBillId": "f8aa684f-a319-4c1c-8503-6f33da8c5e1c",
+    "transaId": "3d61f5fe-8ce3-43db-ac21-7aad09e2f579",
+    "isDone": "notactive"
+  },
+  {
+    "company": "ASSISTIA",
+    "payed": 309.23,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2015-09-21T10:50:17",
+    "about": "ad laborum magna id laboris exercitation pariatur ea cillum consequat",
+    "FatherBillId": "583ceb53-6beb-4d4f-939b-2efa7068a60b",
+    "transaId": "679b7bd7-a363-4afd-ab4e-2a016babad9e",
+    "isDone": "active"
+  },
+  {
+    "company": "EXOSIS",
+    "payed": 3034.35,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2018-05-12T12:59:08",
+    "about": "magna nostrud Lorem fugiat est cillum occaecat ut cillum officia",
+    "FatherBillId": "75a6178a-1860-484e-9fa2-be3da924f307",
+    "transaId": "df68151e-b255-43a6-9a96-c3f636ab547a",
+    "isDone": "active"
+  },
+  {
+    "company": "SENTIA",
+    "payed": 3293.98,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2019-06-18T04:18:22",
+    "about": "sit quis ea eu ad proident exercitation officia labore veniam",
+    "FatherBillId": "5e458501-d7e9-4915-94d4-5716e84795c9",
+    "transaId": "742fa7b8-fe5b-46c3-8f53-5706b8132c00",
+    "isDone": "active"
+  },
+  {
+    "company": "FURNIGEER",
+    "payed": 1919.02,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2015-08-01T11:01:17",
+    "about": "ea culpa culpa velit nulla nostrud ex nisi dolor ipsum",
+    "FatherBillId": "99600131-4eb1-4d21-82cb-60c40aaddbd0",
+    "transaId": "610dfa2c-b7aa-45ac-ae34-1e6dc578f0d4",
+    "isDone": "active"
+  },
+  {
+    "company": "VOLAX",
+    "payed": 918,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2015-03-21T02:37:14",
+    "about": "irure cillum proident enim ex cupidatat aute sit dolore dolor",
+    "FatherBillId": "3a3c18d2-282b-4fb2-8e2d-8fe26519798e",
+    "transaId": "216dba7a-3638-47e6-965c-827dadb0bacf",
+    "isDone": "active"
+  },
+  {
+    "company": "VIAGRAND",
+    "payed": 3503.25,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2019-09-13T02:18:53",
+    "about": "est ad consequat exercitation ex cillum ad officia veniam amet",
+    "FatherBillId": "72ba4579-8d49-4cc9-8a56-943501d9d914",
+    "transaId": "31410f6a-cff5-4d12-bbe1-11f692754ee7",
+    "isDone": "active"
+  },
+  {
+    "company": "KAGGLE",
+    "payed": 3441.02,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2017-11-05T09:54:01",
+    "about": "incididunt fugiat commodo tempor culpa irure fugiat laboris eu ea",
+    "FatherBillId": "72f1d55b-24ef-4ea6-8689-c70968b4bb5c",
+    "transaId": "d2d65b35-63ec-41e6-bb32-8a381c0a3242",
+    "isDone": "notactive"
+  },
+  {
+    "company": "PARAGONIA",
+    "payed": 1317.79,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2018-03-04T11:08:36",
+    "about": "ut sint laboris enim nostrud nulla et ut nulla irure",
+    "FatherBillId": "a989dc5c-32fa-47ec-9631-fe13e5a82b88",
+    "transaId": "62dfa40a-6cc1-426e-855a-360c6da6e4fc",
+    "isDone": "active"
+  },
+  {
+    "company": "ORBIN",
+    "payed": 2268.63,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2020-02-15T09:16:08",
+    "about": "fugiat laborum ullamco cillum quis dolor aute proident tempor ipsum",
+    "FatherBillId": "29582aee-3d80-4f90-87a7-ebae839e6f36",
+    "transaId": "b581a2f9-a7ad-4b60-80ef-51a08538ecbe",
+    "isDone": "notactive"
+  },
+  {
+    "company": "ISOLOGIX",
+    "payed": 1135.88,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2016-10-10T06:34:31",
+    "about": "ex sit proident ipsum nisi aliquip consequat deserunt officia reprehenderit",
+    "FatherBillId": "ec2d9436-5118-443b-94b0-a6ef30cb7939",
+    "transaId": "d5b25324-2ae1-4118-b61c-5f1b6bc8ff67",
+    "isDone": "notactive"
+  },
+  {
+    "company": "ANIXANG",
+    "payed": 2197.42,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2016-02-06T06:29:55",
+    "about": "adipisicing magna ut aliquip nostrud ex voluptate ipsum anim pariatur",
+    "FatherBillId": "b9ee94a8-503e-4cb8-a680-bb2bc7c8e072",
+    "transaId": "8347619d-ddb4-492f-a711-f055f9f91dea",
+    "isDone": "notactive"
+  },
+  {
+    "company": "KYAGORO",
+    "payed": 1674.46,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2018-04-09T10:40:34",
+    "about": "et officia excepteur ex nulla esse eiusmod excepteur laborum occaecat",
+    "FatherBillId": "b85f264a-4c41-4efe-87f7-2cf3bdf6d3c8",
+    "transaId": "30fe2065-9bac-4f9c-affc-a5c189aa5a0a",
+    "isDone": "notactive"
+  },
+  {
+    "company": "GEEKKO",
+    "payed": 3100.2,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2018-01-16T09:48:20",
+    "about": "duis nisi ut aute do deserunt dolore do aute eu",
+    "FatherBillId": "d6dac8c4-34ad-4e47-b3a5-276e4bbeb789",
+    "transaId": "7d37c05a-7cab-46e2-9b69-1e5ba0a8fd45",
+    "isDone": "active"
+  },
+  {
+    "company": "GEEKUS",
+    "payed": 643.2,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2016-10-30T04:31:42",
+    "about": "consectetur excepteur ex elit aute proident sint amet voluptate non",
+    "FatherBillId": "c3962704-e494-4cdf-bc4e-b2493b04a897",
+    "transaId": "c95c8f80-4fe1-4c87-8849-61df23e87433",
+    "isDone": "active"
+  },
+  {
+    "company": "PODUNK",
+    "payed": 3037.95,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2015-03-09T05:16:34",
+    "about": "adipisicing do cillum nisi eiusmod ullamco quis proident dolore esse",
+    "FatherBillId": "5cd12465-215f-4aff-bb54-2c6af1bf756f",
+    "transaId": "bcb2e152-258c-496c-bb35-8b7caf6a9a01",
+    "isDone": "notactive"
+  },
+  {
+    "company": "EZENT",
+    "payed": 3517.88,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2017-08-15T12:13:26",
+    "about": "cillum do dolore fugiat officia cillum exercitation sint et est",
+    "FatherBillId": "5d172a5f-f3dc-438b-8029-14de903e3660",
+    "transaId": "85e2ef30-4245-4907-a6bc-3cd83acb2e74",
+    "isDone": "notactive"
+  },
+  {
+    "company": "ANIVET",
+    "payed": 2473.26,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2019-02-16T10:22:35",
+    "about": "dolor commodo velit magna sint quis voluptate excepteur mollit pariatur",
+    "FatherBillId": "135c0fd6-5407-4916-9dc3-65f2c3c10290",
+    "transaId": "26889e82-f451-4020-ae4b-1645ada1eefd",
+    "isDone": "notactive"
+  },
+  {
+    "company": "NAXDIS",
+    "payed": 1365.22,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2018-02-04T09:10:56",
+    "about": "eu sint do fugiat commodo non exercitation deserunt veniam adipisicing",
+    "FatherBillId": "306aa32c-91fd-4e70-9cf7-119c75ee6e13",
+    "transaId": "0df1b392-eaa8-40af-a9a4-502af6feb3d1",
+    "isDone": "active"
+  },
+  {
+    "company": "LUXURIA",
+    "payed": 3786.48,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2018-02-10T09:08:13",
+    "about": "nostrud proident aute velit consequat officia laboris fugiat nisi ullamco",
+    "FatherBillId": "459d78b4-aa01-4fcf-93b1-74568b7060d7",
+    "transaId": "2cf19f62-cf5d-4a90-9e1b-2c268130f5d5",
+    "isDone": "notactive"
+  },
+  {
+    "company": "PYRAMAX",
+    "payed": 3802.97,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2020-01-24T08:41:47",
+    "about": "ut eiusmod officia magna non laboris pariatur nulla anim voluptate",
+    "FatherBillId": "9de3e40a-b1e6-4656-ad78-73a3cb9925f1",
+    "transaId": "de6766ee-14ec-4b71-adbb-067d805903ed",
+    "isDone": "active"
+  },
+  {
+    "company": "CORMORAN",
+    "payed": 2838.61,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2019-12-13T12:10:04",
+    "about": "irure pariatur ex dolore voluptate qui do dolor aliqua et",
+    "FatherBillId": "f0d6e20b-f2d3-4e9d-ac44-9359673d2e80",
+    "transaId": "e4ace1fd-1eeb-43a3-a401-253d03358e55",
+    "isDone": "active"
+  },
+  {
+    "company": "XSPORTS",
+    "payed": 3710.12,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2016-01-30T02:36:37",
+    "about": "eu aliqua dolore nisi anim amet cillum nulla ad magna",
+    "FatherBillId": "21562118-bd01-42b3-9374-d67735d493c5",
+    "transaId": "aa0495e3-24bc-431e-a8e5-01b505b4abbf",
+    "isDone": "active"
+  },
+  {
+    "company": "EARTHMARK",
+    "payed": 2824.91,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2020-04-11T03:54:24",
+    "about": "dolore sint occaecat est ex adipisicing proident elit magna pariatur",
+    "FatherBillId": "00c769e8-4c31-4bf4-89d1-5de785c8d9de",
+    "transaId": "f257e37c-aeb2-42a2-a2ec-3fb6bdfc3cb1",
+    "isDone": "notactive"
+  },
+  {
+    "company": "FRENEX",
+    "payed": 1396.97,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2015-02-14T04:01:52",
+    "about": "officia ea id fugiat pariatur proident culpa fugiat sunt eu",
+    "FatherBillId": "07f5f12a-ad0b-4f1c-9721-9148479e698f",
+    "transaId": "839a3a97-f9f3-4dae-be6a-c4a077ca9d7d",
+    "isDone": "active"
+  },
+  {
+    "company": "BRAINCLIP",
+    "payed": 3512.22,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2016-06-17T05:21:28",
+    "about": "eiusmod Lorem voluptate pariatur eiusmod aliquip magna irure mollit commodo",
+    "FatherBillId": "a7a630cf-4280-4f33-ae20-ef4e28dd9b7a",
+    "transaId": "91c523c2-ba44-460a-8a1c-ed395b4cc35f",
+    "isDone": "active"
+  },
+  {
+    "company": "MELBACOR",
+    "payed": 1000.83,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2019-10-27T09:25:02",
+    "about": "amet cillum occaecat ipsum et voluptate ex laboris adipisicing do",
+    "FatherBillId": "0edb16ca-3432-4e18-b57b-dfd54c771630",
+    "transaId": "23310ab3-244b-4440-8021-3e3909e2af6d",
+    "isDone": "active"
+  },
+  {
+    "company": "GEEKOLA",
+    "payed": 561.67,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2016-11-26T01:45:39",
+    "about": "dolor sunt tempor ipsum nisi duis deserunt nostrud ad labore",
+    "FatherBillId": "4ffdae87-b4a0-4296-a5a3-9acedd1ca709",
+    "transaId": "269570ba-8cbf-4b57-a7ce-27084e5ce8cf",
+    "isDone": "notactive"
+  },
+  {
+    "company": "SPLINX",
+    "payed": 2919.29,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2018-06-03T02:53:06",
+    "about": "nisi sint excepteur quis deserunt irure reprehenderit ipsum amet aliqua",
+    "FatherBillId": "871de70b-b0c2-468f-b133-eab7c1639f24",
+    "transaId": "b36f5b07-b57c-4002-bae1-5614222eed17",
+    "isDone": "notactive"
+  },
+  {
+    "company": "VELOS",
+    "payed": 727.71,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2014-11-10T05:55:40",
+    "about": "cillum Lorem ullamco ut excepteur ea dolor esse aute aute",
+    "FatherBillId": "8679b4b5-4554-4758-8298-b763d40c894d",
+    "transaId": "7671d2c0-6bd1-4900-ab8c-ac31ace6b0ca",
+    "isDone": "notactive"
+  },
+  {
+    "company": "EXOSPEED",
+    "payed": 3373.29,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2014-05-26T10:32:48",
+    "about": "sint ipsum incididunt nostrud pariatur velit est Lorem nulla elit",
+    "FatherBillId": "cbdb305b-9a6b-49fb-b79f-6a1a3433a28a",
+    "transaId": "5837884e-4ee3-418c-ab69-3e3f7d565752",
+    "isDone": "notactive"
+  },
+  {
+    "company": "MAGNEATO",
+    "payed": 2691.02,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2018-05-27T02:40:42",
+    "about": "consectetur laborum qui occaecat deserunt ad aliquip irure pariatur qui",
+    "FatherBillId": "e82b856f-76bd-4db8-b975-cab7e007ff84",
+    "transaId": "659cbfc3-057d-40d8-b350-a2c450047a00",
+    "isDone": "notactive"
+  },
+  {
+    "company": "SILODYNE",
+    "payed": 2065.18,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2014-02-10T01:27:28",
+    "about": "dolor labore id cillum fugiat esse excepteur excepteur est veniam",
+    "FatherBillId": "d5a76cd7-3db3-46aa-9239-4d031e368774",
+    "transaId": "6a3a52fd-1126-4f53-a404-664477156e82",
+    "isDone": "active"
+  },
+  {
+    "company": "CENTICE",
+    "payed": 1151.11,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2016-12-22T04:14:34",
+    "about": "labore ex voluptate consectetur irure voluptate ut sunt anim sint",
+    "FatherBillId": "cd84166d-2e6c-4579-8c21-0a9ff62a5299",
+    "transaId": "5a7284e3-7814-443e-897c-85ce945fecb4",
+    "isDone": "active"
+  },
+  {
+    "company": "TRIPSCH",
+    "payed": 926.05,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2015-06-04T05:54:21",
+    "about": "proident ut amet dolor culpa ad fugiat magna commodo incididunt",
+    "FatherBillId": "36f6a2c9-7e06-4283-910b-cfd60733e248",
+    "transaId": "f8266a90-3281-45c4-aefa-c52b9ea3a184",
+    "isDone": "notactive"
+  },
+  {
+    "company": "NSPIRE",
+    "payed": 3381.04,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2014-05-07T07:04:05",
+    "about": "enim do sint amet culpa quis ipsum eu deserunt ullamco",
+    "FatherBillId": "a2692c93-c6b9-45d0-97f4-63a54a8ea03d",
+    "transaId": "50984555-e21a-4d5c-a22e-24840f7201c1",
+    "isDone": "active"
+  },
+  {
+    "company": "RENOVIZE",
+    "payed": 3291.33,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2017-10-16T03:33:39",
+    "about": "qui et in elit ad pariatur et laboris sit ut",
+    "FatherBillId": "d3715688-958e-473e-84c4-44c3e7af33de",
+    "transaId": "f50a57a3-dc4b-4f2b-b3b0-3d3a4e3a5701",
+    "isDone": "notactive"
+  },
+  {
+    "company": "BLEEKO",
+    "payed": 1648.34,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2014-10-20T01:46:48",
+    "about": "sunt eu ad laborum exercitation consequat cupidatat nisi nostrud Lorem",
+    "FatherBillId": "1749cbd8-8041-4885-b987-09e0cd67f91f",
+    "transaId": "a8849dcb-c32c-4429-b988-e6ee37aa372c",
+    "isDone": "notactive"
+  },
+  {
+    "company": "SOFTMICRO",
+    "payed": 341.02,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2014-12-19T07:08:30",
+    "about": "labore reprehenderit officia ex fugiat incididunt ipsum occaecat ipsum quis",
+    "FatherBillId": "4a9f78c0-601a-46a8-af1f-d1ff34cd4b91",
+    "transaId": "2f80fc96-f7d3-4437-a562-3ce45df0c89f",
+    "isDone": "active"
+  },
+  {
+    "company": "PHORMULA",
+    "payed": 3758.91,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2016-03-03T08:57:37",
+    "about": "consequat mollit elit occaecat sit magna amet ut qui aliquip",
+    "FatherBillId": "bb6ec620-7ef4-41d0-9a99-722162d80a15",
+    "transaId": "d28de322-b9cc-43e6-afb4-fcbebe5f78d7",
+    "isDone": "notactive"
+  },
+  {
+    "company": "COMTENT",
+    "payed": 2556.28,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2017-04-10T11:34:14",
+    "about": "mollit adipisicing commodo anim deserunt magna laborum Lorem excepteur proident",
+    "FatherBillId": "c87879c3-b161-4af2-9a49-1aff5c635887",
+    "transaId": "6637c452-c018-4808-b8b7-3630d37ee129",
+    "isDone": "notactive"
+  },
+  {
+    "company": "PLASMOSIS",
+    "payed": 2665.82,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2015-12-24T04:09:53",
+    "about": "minim adipisicing ea tempor officia commodo aliquip non ea labore",
+    "FatherBillId": "76f885a6-f0ac-43d5-9dcc-a1e6b55c3763",
+    "transaId": "09146dcc-fcaa-4514-8ff1-209c45d4c15b",
+    "isDone": "notactive"
+  },
+  {
+    "company": "POSHOME",
+    "payed": 3605.17,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2014-09-23T08:13:12",
+    "about": "nostrud est voluptate cillum proident reprehenderit voluptate nisi cillum reprehenderit",
+    "FatherBillId": "bd954d96-ece1-4d71-ad15-42b61cb3a33d",
+    "transaId": "180f67cb-eb67-4f83-b4c3-65d53d73404b",
+    "isDone": "notactive"
+  },
+  {
+    "company": "NAMEBOX",
+    "payed": 3186.45,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2018-09-16T07:47:46",
+    "about": "do voluptate tempor sint nostrud incididunt elit sunt mollit pariatur",
+    "FatherBillId": "29fb9495-ae21-4c34-b79e-9ba54cf8b6c8",
+    "transaId": "f9bf78c3-e7f0-4b7d-b0c8-e83578823c79",
+    "isDone": "active"
+  },
+  {
+    "company": "APPLICA",
+    "payed": 1236.82,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2015-04-12T10:59:36",
+    "about": "mollit consectetur magna tempor nisi esse laborum fugiat minim dolor",
+    "FatherBillId": "db389ed4-7037-4b58-9d2b-d59d19a36fc8",
+    "transaId": "3226843c-2636-4343-8770-e612674afb1d",
+    "isDone": "notactive"
+  },
+  {
+    "company": "MAINELAND",
+    "payed": 3643.83,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2014-08-27T10:53:39",
+    "about": "occaecat elit ea Lorem dolore labore aute incididunt non fugiat",
+    "FatherBillId": "49d18248-3197-4918-8385-332c6c48d0c5",
+    "transaId": "3362c0a1-4596-4a67-827b-cad8f8d59b17",
+    "isDone": "active"
+  },
+  {
+    "company": "NURPLEX",
+    "payed": 3082.14,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2015-09-16T04:29:00",
+    "about": "laboris ad amet eiusmod et ut mollit commodo ex do",
+    "FatherBillId": "51e2326c-a773-4c29-9319-10f77f717d32",
+    "transaId": "ddeb5209-5b1c-4f11-b987-948025145d1f",
+    "isDone": "active"
+  },
+  {
+    "company": "VALPREAL",
+    "payed": 672.02,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2017-09-03T07:39:12",
+    "about": "in nisi dolore officia laborum magna eu sit nostrud ullamco",
+    "FatherBillId": "87717028-dec0-4629-b549-691efb3893ec",
+    "transaId": "b3315e2e-e53d-4fba-8909-74c0f466b9ec",
+    "isDone": "active"
+  },
+  {
+    "company": "FUTURIZE",
+    "payed": 1761.52,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2017-06-07T04:42:57",
+    "about": "exercitation dolore pariatur ullamco aliquip ipsum ex dolore pariatur nostrud",
+    "FatherBillId": "ad613eab-9611-4ed5-88a5-cb1f5a260b65",
+    "transaId": "3bc7b413-98c7-4afc-98c3-087e3779bb9a",
+    "isDone": "notactive"
+  },
+  {
+    "company": "PYRAMI",
+    "payed": 1263.58,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2017-01-22T05:33:13",
+    "about": "ad fugiat ipsum id voluptate qui tempor dolore nostrud do",
+    "FatherBillId": "55a9e113-5e38-423f-b30f-3dbf5f3aee53",
+    "transaId": "bda60355-b52e-4601-ad0a-1dbbc10d09b0",
+    "isDone": "active"
+  },
+  {
+    "company": "MARKETOID",
+    "payed": 1248.75,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2020-06-04T07:51:55",
+    "about": "officia labore labore fugiat enim dolore cupidatat sit cillum velit",
+    "FatherBillId": "2d0d381f-de35-4805-b855-c2833a755227",
+    "transaId": "c50b8a2e-3631-4206-8583-f473a22c5f8a",
+    "isDone": "notactive"
+  },
+  {
+    "company": "SPEEDBOLT",
+    "payed": 2129.02,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2017-03-01T02:30:07",
+    "about": "consectetur tempor adipisicing consequat anim anim est quis est consequat",
+    "FatherBillId": "d11ca302-ce24-46dc-923e-5d171291ed28",
+    "transaId": "9edf2cd1-4fb4-4f85-a0ad-87c0f0332c27",
+    "isDone": "active"
+  },
+  {
+    "company": "SNACKTION",
+    "payed": 495.43,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2017-08-01T02:42:27",
+    "about": "magna non nulla fugiat mollit ex pariatur exercitation ipsum nostrud",
+    "FatherBillId": "042ddeaf-1fad-4fae-8e63-3508fde04b66",
+    "transaId": "669b47b1-8f37-46f7-a979-96defe418433",
+    "isDone": "notactive"
+  },
+  {
+    "company": "TYPHONICA",
+    "payed": 3663.29,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2016-09-04T05:54:45",
+    "about": "veniam irure culpa consectetur ea tempor Lorem id veniam reprehenderit",
+    "FatherBillId": "ae9e8e44-07bf-4b3e-b256-21748c85892f",
+    "transaId": "bd6b2b7b-8aaa-44d7-a0d9-f02085cd9013",
+    "isDone": "active"
+  },
+  {
+    "company": "BYTREX",
+    "payed": 2738.4,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2016-03-17T11:02:21",
+    "about": "elit proident duis quis amet veniam ipsum in ea ad",
+    "FatherBillId": "020912b5-1cd0-4bae-bc60-989721d4e575",
+    "transaId": "08444613-46b5-4b91-8a3f-b366d3e87273",
+    "isDone": "active"
+  },
+  {
+    "company": "PLEXIA",
+    "payed": 275.59,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2020-01-12T08:37:38",
+    "about": "id est voluptate Lorem nulla cillum consectetur consequat qui labore",
+    "FatherBillId": "94b144a1-1ab8-4e6b-847f-12a310e3fd69",
+    "transaId": "c9720596-f901-4a35-87a4-32ddcc7e8368",
+    "isDone": "active"
+  },
+  {
+    "company": "CINCYR",
+    "payed": 427.58,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2020-01-04T01:14:11",
+    "about": "nulla exercitation ea excepteur eu exercitation ullamco sint consectetur tempor",
+    "FatherBillId": "91cf8ab4-461b-4d59-8dc9-15de979db8d6",
+    "transaId": "1b50153f-b90b-4699-8e9d-9a1b70761fbf",
+    "isDone": "notactive"
+  },
+  {
+    "company": "COLLAIRE",
+    "payed": 1683.66,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2018-01-22T02:16:52",
+    "about": "culpa Lorem laborum laboris laboris ad magna aute exercitation in",
+    "FatherBillId": "7cd8da69-162f-4be5-9fa0-9681ee29a3be",
+    "transaId": "d4c12498-4bee-4fe7-806f-fa629cc058b1",
+    "isDone": "active"
+  },
+  {
+    "company": "ISBOL",
+    "payed": 3640.42,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2019-11-25T03:32:08",
+    "about": "reprehenderit tempor mollit dolore consectetur ex magna nostrud exercitation ut",
+    "FatherBillId": "f8e3e719-f153-4bee-a799-36bd527b4b94",
+    "transaId": "39b46f3a-3830-4f30-a5cc-595c191d932b",
+    "isDone": "active"
+  },
+  {
+    "company": "ULTRASURE",
+    "payed": 3424.65,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2019-08-18T12:03:44",
+    "about": "dolore velit incididunt tempor irure occaecat commodo Lorem qui consectetur",
+    "FatherBillId": "ffcaaf9f-ac4c-4081-b46f-a42453f2d4b5",
+    "transaId": "b6a6bb34-009b-4e0f-aa4e-7d43e3eb52b0",
+    "isDone": "active"
+  },
+  {
+    "company": "HANDSHAKE",
+    "payed": 1586.77,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2015-07-20T03:14:04",
+    "about": "minim officia mollit duis fugiat do in excepteur ipsum culpa",
+    "FatherBillId": "f3385b52-8e5e-46bb-979f-e25094833b77",
+    "transaId": "7c95c759-10fc-43fc-8991-814947346a79",
+    "isDone": "notactive"
+  },
+  {
+    "company": "SONIQUE",
+    "payed": 3111.11,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2015-11-25T09:47:11",
+    "about": "cupidatat laborum nulla nisi in Lorem pariatur est ad reprehenderit",
+    "FatherBillId": "c639a05c-88e9-46a9-acf9-213ce47fb707",
+    "transaId": "dc83439c-8e8d-4e73-bc6f-a663230ece0d",
+    "isDone": "active"
+  },
+  {
+    "company": "KNEEDLES",
+    "payed": 2649.04,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2019-02-09T05:23:22",
+    "about": "eu aute laboris est Lorem fugiat esse adipisicing dolor minim",
+    "FatherBillId": "15678101-a8dc-453c-a83d-336a5a22e551",
+    "transaId": "328596cb-1803-4949-8085-921303780c3b",
+    "isDone": "notactive"
+  },
+  {
+    "company": "DYNO",
+    "payed": 2483.6,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2016-11-27T01:09:54",
+    "about": "qui id aliquip Lorem quis proident exercitation irure nostrud culpa",
+    "FatherBillId": "a20d0a78-9145-48a7-a3b0-c1489b4ebc54",
+    "transaId": "c613ed46-800b-4217-99a6-319107eae6ae",
+    "isDone": "notactive"
+  },
+  {
+    "company": "KLUGGER",
+    "payed": 1490.2,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2014-05-29T06:47:05",
+    "about": "ut incididunt commodo id proident ullamco veniam culpa non magna",
+    "FatherBillId": "51645cfb-7bc3-488d-8413-22924843165a",
+    "transaId": "88167bb0-3764-42e0-8f01-abe2d7a82b78",
+    "isDone": "notactive"
+  },
+  {
+    "company": "SPHERIX",
+    "payed": 1797.36,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2019-09-18T01:04:18",
+    "about": "quis pariatur qui esse incididunt occaecat adipisicing ut cillum aute",
+    "FatherBillId": "13e4eed7-04bd-4775-8a00-fee3fc5afbba",
+    "transaId": "9ee50699-5b2f-45d0-95f9-bcb9974f390a",
+    "isDone": "active"
+  },
+  {
+    "company": "GEOSTELE",
+    "payed": 1600.33,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2015-06-09T11:04:22",
+    "about": "ea non magna anim anim labore aute incididunt sint ea",
+    "FatherBillId": "498f7498-c8fc-46a6-a278-a1805ad3e921",
+    "transaId": "e7bcea06-cc64-4182-9b83-99ab8e6de968",
+    "isDone": "notactive"
+  },
+  {
+    "company": "FIREWAX",
+    "payed": 3085.54,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2014-04-03T01:18:39",
+    "about": "veniam esse nostrud magna commodo adipisicing proident id mollit cupidatat",
+    "FatherBillId": "f4b36774-83be-4211-8dfc-df2c78fb1f69",
+    "transaId": "541602b7-e125-4e77-a833-c8b6860221e6",
+    "isDone": "notactive"
+  },
+  {
+    "company": "MULTRON",
+    "payed": 303.09,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2015-10-23T06:29:27",
+    "about": "reprehenderit reprehenderit fugiat eu ea dolore nulla quis exercitation dolore",
+    "FatherBillId": "134403f6-e69b-4abc-a95e-2f81801e45e5",
+    "transaId": "58821ad5-019c-4fb2-9f46-e9435f9aa4d3",
+    "isDone": "notactive"
+  },
+  {
+    "company": "EMOLTRA",
+    "payed": 576.2,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2015-02-11T08:39:01",
+    "about": "ullamco excepteur amet excepteur incididunt dolor laborum exercitation amet mollit",
+    "FatherBillId": "383af642-b592-43e8-aef0-3da711ee04ca",
+    "transaId": "ca1e8e5b-77ea-478a-8660-6d7a46e76d84",
+    "isDone": "notactive"
+  },
+  {
+    "company": "TERRAGEN",
+    "payed": 3042.39,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2015-07-25T10:32:09",
+    "about": "aliqua in ut magna adipisicing excepteur duis officia in consectetur",
+    "FatherBillId": "faf1b2b6-1196-4409-8066-8506611fbc77",
+    "transaId": "c8cfb81a-9b48-475b-94c6-b158aa8a1bb2",
+    "isDone": "active"
+  },
+  {
+    "company": "SLOGANAUT",
+    "payed": 2961.63,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2017-06-11T04:20:11",
+    "about": "cillum tempor Lorem non dolore Lorem veniam fugiat id et",
+    "FatherBillId": "bdceb1f7-9af5-4177-a6c0-84fc27ceb124",
+    "transaId": "8fb8cc31-cc9b-4752-9708-ab48ef9b7a0f",
+    "isDone": "notactive"
+  },
+  {
+    "company": "MOTOVATE",
+    "payed": 1548.94,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2014-06-04T06:52:33",
+    "about": "duis pariatur do Lorem proident consectetur aute ullamco Lorem non",
+    "FatherBillId": "3ba18787-a7ac-4a47-a42d-9e4dd4cc810f",
+    "transaId": "8b9301d9-51db-4273-8c78-34c02c132bbc",
+    "isDone": "notactive"
+  },
+  {
+    "company": "ZOLARITY",
+    "payed": 2484.26,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2014-02-18T08:47:47",
+    "about": "do pariatur velit aliquip proident cupidatat cupidatat id in esse",
+    "FatherBillId": "d178b5a1-d818-42a4-802b-5b50fcac421a",
+    "transaId": "f2d0c7af-1353-4a5d-9978-1124a28da1ea",
+    "isDone": "active"
+  },
+  {
+    "company": "INSURETY",
+    "payed": 3348.68,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2015-08-31T01:06:05",
+    "about": "veniam aute consequat consectetur voluptate amet mollit laborum culpa deserunt",
+    "FatherBillId": "f65f2046-500f-4518-a33a-99ac99c5eeb6",
+    "transaId": "261c41f7-dea1-441f-b328-a90815bccf7e",
+    "isDone": "notactive"
+  },
+  {
+    "company": "ARCHITAX",
+    "payed": 3075.27,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2019-03-15T01:17:19",
+    "about": "quis et exercitation sit ex reprehenderit esse esse minim veniam",
+    "FatherBillId": "8116de43-dd27-4f13-a5b8-a925010f41df",
+    "transaId": "d57511f4-fe0a-434a-aaac-09d5eea15056",
+    "isDone": "active"
+  },
+  {
+    "company": "ZEAM",
+    "payed": 216.25,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2017-03-24T05:24:11",
+    "about": "esse ex sunt ex ullamco elit amet duis qui amet",
+    "FatherBillId": "65f6e2fe-11bc-4914-8deb-37bb4936401a",
+    "transaId": "8ec5b6cf-595a-43cd-bcdc-bb763558aee3",
+    "isDone": "notactive"
+  },
+  {
+    "company": "KINETICUT",
+    "payed": 2639.2,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2017-01-15T09:06:32",
+    "about": "dolore in voluptate veniam voluptate voluptate consequat voluptate cupidatat sit",
+    "FatherBillId": "2c7c4dfb-9d42-4c1f-8ff5-33b4e322be87",
+    "transaId": "4d9540e6-8d0f-411c-ad7f-4d784963affe",
+    "isDone": "active"
+  },
+  {
+    "company": "NETAGY",
+    "payed": 855.77,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2016-01-07T12:01:56",
+    "about": "aliqua nulla ex eu deserunt duis enim quis aliqua ea",
+    "FatherBillId": "a16560d8-c73a-47f2-a245-7c9735b8f4c4",
+    "transaId": "a156e9ed-1664-45e2-a8c3-4e87db5094c0",
+    "isDone": "notactive"
+  },
+  {
+    "company": "DANCITY",
+    "payed": 3940.54,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2015-05-03T03:23:07",
+    "about": "aliqua velit laboris excepteur consequat amet incididunt occaecat qui voluptate",
+    "FatherBillId": "44113008-61a5-48b7-a987-da8ff5e72be0",
+    "transaId": "ef25a2d9-72db-4e06-b5cf-d414769eb5db",
+    "isDone": "active"
+  },
+  {
+    "company": "PHEAST",
+    "payed": 166.53,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2015-06-20T04:18:49",
+    "about": "reprehenderit duis cillum reprehenderit ullamco Lorem id aliqua consequat minim",
+    "FatherBillId": "ba3db524-63bb-4263-9e5d-a6f574e0bd52",
+    "transaId": "08b9fe78-40df-40f4-ba8a-fba7fc9d5fda",
+    "isDone": "notactive"
+  },
+  {
+    "company": "SLAX",
+    "payed": 3548.89,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2020-05-23T06:57:56",
+    "about": "mollit non nostrud tempor nulla aliquip quis commodo ex deserunt",
+    "FatherBillId": "2493624a-099b-4877-bfcc-00761c9afd58",
+    "transaId": "2b3c4592-f6e5-4a3b-b3d3-63edf4efe599",
+    "isDone": "active"
+  },
+  {
+    "company": "AUSTEX",
+    "payed": 2401.78,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2016-03-08T02:24:29",
+    "about": "mollit adipisicing consectetur consectetur nostrud velit in qui quis cillum",
+    "FatherBillId": "e4ab4ae0-c3f3-4d55-9ed0-13585810ac15",
+    "transaId": "6f34f492-6ea6-45ea-ae2c-46dc18f2acb7",
+    "isDone": "active"
+  },
+  {
+    "company": "ZOGAK",
+    "payed": 1208.88,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2018-07-02T11:13:41",
+    "about": "minim laborum excepteur incididunt non magna labore in fugiat est",
+    "FatherBillId": "91e9adb5-1068-448e-9716-ab2fdde0fef7",
+    "transaId": "88461e2b-8fb7-4d11-902e-972d7ba6bfe4",
+    "isDone": "active"
+  },
+  {
+    "company": "ZOID",
+    "payed": 366.12,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2020-03-20T03:55:19",
+    "about": "cupidatat et quis ipsum proident laborum labore nulla non pariatur",
+    "FatherBillId": "35a8ceca-1db0-4592-b66a-f93d06e7aa04",
+    "transaId": "16b68edb-0926-4681-8e7b-30c5058e2af9",
+    "isDone": "active"
+  },
+  {
+    "company": "REMOLD",
+    "payed": 3968,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2014-08-19T02:56:06",
+    "about": "mollit deserunt tempor anim deserunt velit mollit deserunt sint laborum",
+    "FatherBillId": "7379ab1a-ed2f-442f-9623-f35974bb0267",
+    "transaId": "7ac25f21-8b44-4deb-b54a-1fae34ec2d08",
+    "isDone": "notactive"
+  },
+  {
+    "company": "BUZZOPIA",
+    "payed": 3124.03,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2019-12-19T03:38:50",
+    "about": "duis nulla excepteur minim do enim duis amet sint aliquip",
+    "FatherBillId": "186d6226-a9df-4dd2-9a83-69bffab0c6e7",
+    "transaId": "16aacad5-fa4b-40f4-b0dd-7fb7d2e38753",
+    "isDone": "notactive"
+  },
+  {
+    "company": "ZIORE",
+    "payed": 1953.29,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2018-08-13T07:48:07",
+    "about": "deserunt id qui irure cillum incididunt ipsum elit duis eiusmod",
+    "FatherBillId": "54d11409-cd5f-4240-ba81-4923393b08d8",
+    "transaId": "816d34db-25ee-4848-9aa5-2577afdd3518",
+    "isDone": "active"
+  },
+  {
+    "company": "MANGLO",
+    "payed": 3400.05,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2014-07-05T06:56:50",
+    "about": "aute velit est consequat officia aliquip amet Lorem dolor cupidatat",
+    "FatherBillId": "32a10cc0-51d4-4239-bb95-8f49b10bcea4",
+    "transaId": "55505ce5-2e44-46c5-bece-d6bcc41259de",
+    "isDone": "notactive"
+  },
+  {
+    "company": "EXTRAGENE",
+    "payed": 2184.8,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2019-10-08T03:37:17",
+    "about": "mollit est magna enim est reprehenderit magna consectetur est proident",
+    "FatherBillId": "43011599-ad42-4ef9-99bb-6f0590df9522",
+    "transaId": "3e67f699-7132-4d85-a855-29ded3244bb4",
+    "isDone": "notactive"
+  },
+  {
+    "company": "VENDBLEND",
+    "payed": 2229.1,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2018-03-25T09:56:31",
+    "about": "non consectetur pariatur enim nostrud aliquip duis officia Lorem cupidatat",
+    "FatherBillId": "7e17d739-5ddb-4680-af78-6e9b15ab2ed1",
+    "transaId": "b4f4f4dd-3d5f-444f-83a6-3a819dda2024",
+    "isDone": "active"
+  },
+  {
+    "company": "NEUROCELL",
+    "payed": 3756.3,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2020-09-23T11:22:18",
+    "about": "mollit officia eiusmod officia officia do voluptate amet culpa id",
+    "FatherBillId": "dd839876-5c77-46e9-a031-1e62de19543f",
+    "transaId": "00dc5d6e-b589-4931-ad2e-2b91fbf088ba",
+    "isDone": "notactive"
+  },
+  {
+    "company": "SAVVY",
+    "payed": 718.15,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2014-08-12T04:49:25",
+    "about": "labore veniam sunt elit minim quis amet ad sit esse",
+    "FatherBillId": "4e4a008f-04ea-4c66-82d6-059ea5ca59fb",
+    "transaId": "fbac8468-9ed8-4547-b6be-7cf01a895e31",
+    "isDone": "notactive"
+  },
+  {
+    "company": "CALLFLEX",
+    "payed": 2113.24,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2016-11-01T09:47:19",
+    "about": "Lorem veniam commodo nulla enim aute ipsum aute et veniam",
+    "FatherBillId": "511d6c70-3e1b-472a-8795-2f52553f9471",
+    "transaId": "2fb86da1-dbe7-4b78-bdd6-fc1d254b0b4a",
+    "isDone": "notactive"
+  },
+  {
+    "company": "ERSUM",
+    "payed": 502.12,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2016-04-13T08:16:56",
+    "about": "cupidatat in proident laboris irure nostrud mollit cupidatat enim id",
+    "FatherBillId": "04ad5148-2a0e-49ce-9efb-9ebdd04e9768",
+    "transaId": "4eb511bd-434a-4dc9-acf9-3fdde8c8d67e",
+    "isDone": "active"
+  },
+  {
+    "company": "COGENTRY",
+    "payed": 1777.52,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2018-06-27T10:00:27",
+    "about": "aute ad aute reprehenderit non excepteur incididunt tempor reprehenderit consequat",
+    "FatherBillId": "58c4abf0-4160-43ad-9cd8-498b85359c6b",
+    "transaId": "068630a3-50d6-49b3-87a9-4a199601c27e",
+    "isDone": "notactive"
+  },
+  {
+    "company": "THREDZ",
+    "payed": 2351.47,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2019-06-12T03:45:57",
+    "about": "ea adipisicing duis incididunt labore amet velit ad tempor sint",
+    "FatherBillId": "b7954352-6efe-47be-ad4f-257708f35f02",
+    "transaId": "d6caa32a-a50a-491e-ad2d-3ac4876c006e",
+    "isDone": "active"
+  },
+  {
+    "company": "PIVITOL",
+    "payed": 1352.08,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2017-02-27T03:36:24",
+    "about": "proident minim incididunt id amet nostrud esse nulla anim eu",
+    "FatherBillId": "20bffe52-0b00-4966-a19a-667b805eefd7",
+    "transaId": "1fbe5c89-1e85-4bc3-ba6b-098f9efa03a7",
+    "isDone": "active"
+  },
+  {
+    "company": "CANOPOLY",
+    "payed": 1239.16,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2018-06-07T11:38:17",
+    "about": "reprehenderit qui magna ullamco occaecat minim aute occaecat ipsum pariatur",
+    "FatherBillId": "e5734f58-2889-40f1-9830-4ea975516858",
+    "transaId": "cec0dd34-f8c8-4f9d-b558-44a44ecd42fe",
+    "isDone": "active"
+  },
+  {
+    "company": "JOVIOLD",
+    "payed": 1248.04,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2017-06-23T12:40:06",
+    "about": "non cupidatat deserunt sint pariatur adipisicing tempor commodo veniam ipsum",
+    "FatherBillId": "07b1c4cb-31b2-43db-95d2-bb4a6944542b",
+    "transaId": "d76e50c1-9589-4d1a-8a53-95b0e9c9e8e8",
+    "isDone": "notactive"
+  },
+  {
+    "company": "TSUNAMIA",
+    "payed": 588.06,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2014-07-20T01:12:21",
+    "about": "proident laborum mollit cillum aliqua Lorem incididunt dolor in nostrud",
+    "FatherBillId": "14008cda-7d8f-4e8f-90b2-710ab73c08a6",
+    "transaId": "e17b8a11-7de8-40e8-8bfd-0151d1c7f209",
+    "isDone": "notactive"
+  },
+  {
+    "company": "DIGIFAD",
+    "payed": 3857.44,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2016-02-13T09:25:25",
+    "about": "culpa nulla aliqua do consequat ullamco ullamco est laborum excepteur",
+    "FatherBillId": "fff48752-bcd6-41fd-8206-0a5c45c1e09d",
+    "transaId": "8230b834-e90a-4d0e-8bd2-0f9b2379b51a",
+    "isDone": "notactive"
+  },
+  {
+    "company": "GYNKO",
+    "payed": 826.4,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2020-06-01T09:23:50",
+    "about": "ad ut eu deserunt esse veniam labore consequat sunt velit",
+    "FatherBillId": "a09c2d5d-5ffd-4097-9477-2650b2fc6f97",
+    "transaId": "329bba80-a550-46d5-a35a-e88bbf6b1965",
+    "isDone": "active"
+  },
+  {
+    "company": "NITRACYR",
+    "payed": 2462.28,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2017-11-25T12:28:28",
+    "about": "exercitation duis aliqua est duis culpa nostrud aliquip irure magna",
+    "FatherBillId": "3403fc10-abf0-4c6e-bf25-3d441748b3c4",
+    "transaId": "be16bbbd-ac56-4a55-8fd3-b19724d2cb17",
+    "isDone": "notactive"
+  },
+  {
+    "company": "RODEOLOGY",
+    "payed": 3215.05,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2019-09-10T07:27:17",
+    "about": "ad esse irure ipsum magna culpa ea est velit tempor",
+    "FatherBillId": "fabec9bd-c72b-4eed-9de4-1e89f63ddb02",
+    "transaId": "920b12c5-033b-4068-bc2a-ff01ac273694",
+    "isDone": "notactive"
+  },
+  {
+    "company": "DEMINIMUM",
+    "payed": 1606.26,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2018-06-18T07:22:29",
+    "about": "commodo consectetur deserunt est consequat qui et id consectetur veniam",
+    "FatherBillId": "f04b88df-4d9f-4129-8853-6172846091b4",
+    "transaId": "1b73b744-d1bd-4d0f-8787-8023f7e00fbb",
+    "isDone": "notactive"
+  },
+  {
+    "company": "ZILPHUR",
+    "payed": 2547.6,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2019-10-11T04:01:14",
+    "about": "est dolore deserunt dolor in tempor sunt tempor cupidatat non",
+    "FatherBillId": "ad540d87-2719-49ab-9eac-e395237ea0df",
+    "transaId": "ca222ec7-d341-4462-9a96-f645062a219a",
+    "isDone": "active"
+  },
+  {
+    "company": "MAKINGWAY",
+    "payed": 169.42,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2014-02-01T09:36:46",
+    "about": "nostrud cupidatat magna labore aliqua enim esse veniam eu nisi",
+    "FatherBillId": "984fdc19-09b8-4b53-8ec8-9b377f5593b5",
+    "transaId": "9a97e611-60a1-4f72-82b6-e13742221324",
+    "isDone": "active"
+  },
+  {
+    "company": "PERMADYNE",
+    "payed": 156.18,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2018-06-06T04:22:50",
+    "about": "aliquip enim ea dolore culpa reprehenderit laboris eu quis quis",
+    "FatherBillId": "15a72687-734d-451c-a229-6149db8f6ddb",
+    "transaId": "a1b0e0fb-aa64-4c65-9d67-438c792fcafc",
+    "isDone": "active"
+  },
+  {
+    "company": "VENOFLEX",
+    "payed": 889.25,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2018-03-19T11:43:41",
+    "about": "commodo qui qui ullamco consequat pariatur culpa labore anim fugiat",
+    "FatherBillId": "fa312685-823d-488c-b3b0-dece9335c51a",
+    "transaId": "7d1cdce5-2fb1-48cc-be94-6844f757065b",
+    "isDone": "notactive"
+  },
+  {
+    "company": "SEQUITUR",
+    "payed": 1704.85,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2018-12-29T06:26:37",
+    "about": "quis tempor nostrud nisi est cillum labore labore anim in",
+    "FatherBillId": "c36cc072-ee58-474b-815e-cd996edb1603",
+    "transaId": "85a350be-120c-4e4d-8262-cee5cd1fdb12",
+    "isDone": "active"
+  },
+  {
+    "company": "MEDMEX",
+    "payed": 2243.22,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2019-10-14T11:10:28",
+    "about": "eiusmod id aute duis qui in aute laboris ut esse",
+    "FatherBillId": "0fa0ead2-8f58-4842-ae43-285e5d0ed7ce",
+    "transaId": "c764b95c-8b01-4d0e-97d8-4d7687122583",
+    "isDone": "notactive"
+  },
+  {
+    "company": "EXOSWITCH",
+    "payed": 2954.74,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2015-11-12T10:11:30",
+    "about": "dolore labore excepteur officia consectetur non reprehenderit exercitation eiusmod labore",
+    "FatherBillId": "a4a56a92-6f17-4c6f-a359-dd227c7e8122",
+    "transaId": "e92e0bd4-d28f-435d-b2d9-ce483a4ec315",
+    "isDone": "active"
+  },
+  {
+    "company": "AUTOGRATE",
+    "payed": 3715.47,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2015-02-21T06:05:43",
+    "about": "laboris voluptate et id non excepteur ea ad incididunt consectetur",
+    "FatherBillId": "a07fe2de-799b-4178-be77-6348c74174a6",
+    "transaId": "2a67ccad-9f8e-4abd-a4c2-005b4122df16",
+    "isDone": "active"
+  },
+  {
+    "company": "TRASOLA",
+    "payed": 2928.89,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2016-07-04T11:51:02",
+    "about": "nisi nulla sit ut et eu fugiat amet tempor tempor",
+    "FatherBillId": "61082f08-87b2-4c90-ba6c-19dce782f878",
+    "transaId": "22752319-cd32-4927-ba4a-4e1ce07384d0",
+    "isDone": "notactive"
+  },
+  {
+    "company": "ZILLACTIC",
+    "payed": 1872.86,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2017-07-17T03:14:18",
+    "about": "est ipsum velit in quis dolor dolor magna et ex",
+    "FatherBillId": "f8a14f25-59ab-479a-87de-3d69928dbbf9",
+    "transaId": "5c046118-bf4f-4734-b0c9-bed998876923",
+    "isDone": "active"
+  },
+  {
+    "company": "OTHERWAY",
+    "payed": 3469.46,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2019-12-29T08:25:25",
+    "about": "duis et consequat pariatur est minim labore aliqua elit ullamco",
+    "FatherBillId": "58af40ee-a316-4a12-b648-e03db93e2f20",
+    "transaId": "f2570df0-8a90-472b-b7e9-c06786ca9d0f",
+    "isDone": "notactive"
+  },
+  {
+    "company": "GENMEX",
+    "payed": 3233.64,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2017-03-22T04:37:10",
+    "about": "ad ullamco dolor mollit in aliqua dolor magna sunt deserunt",
+    "FatherBillId": "d242aeff-2815-48bf-be97-a00e2b613e38",
+    "transaId": "5d5f8ae5-dd4b-46cb-99cb-eb7e7813e08f",
+    "isDone": "active"
+  },
+  {
+    "company": "VERAQ",
+    "payed": 2452.11,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2015-09-07T06:20:52",
+    "about": "ex enim consequat in ullamco exercitation in dolor magna cupidatat",
+    "FatherBillId": "dcd801b7-e8d7-40b8-8ae6-058d7c5df124",
+    "transaId": "c5457cca-b682-43af-a8b2-66ff5f6aa6ff",
+    "isDone": "active"
+  },
+  {
+    "company": "BUGSALL",
+    "payed": 2536.37,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2020-09-27T10:34:14",
+    "about": "Lorem consequat in dolore cillum nulla ullamco et ut eiusmod",
+    "FatherBillId": "63fc3313-75c1-4278-9436-1b919355eb17",
+    "transaId": "bcf6c308-d962-4485-ac90-b0ebb43f6891",
+    "isDone": "active"
+  },
+  {
+    "company": "SCENTRIC",
+    "payed": 2598.05,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2017-11-25T06:03:05",
+    "about": "est elit consectetur commodo exercitation est labore amet excepteur commodo",
+    "FatherBillId": "1037144c-0ec1-4d3c-8f32-f9fa343f6b13",
+    "transaId": "6a1b4bcf-0307-4970-a577-d49112b2ec3a",
+    "isDone": "notactive"
+  },
+  {
+    "company": "BEADZZA",
+    "payed": 2721.62,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2017-08-10T03:54:37",
+    "about": "culpa ex laboris exercitation deserunt enim sunt velit id cupidatat",
+    "FatherBillId": "bad5317f-25cb-4c31-bb67-c5187e5c18af",
+    "transaId": "5d0f7a59-b1bc-4699-bb82-9d31e8580b39",
+    "isDone": "notactive"
+  },
+  {
+    "company": "KYAGURU",
+    "payed": 3621.84,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2017-02-25T11:00:02",
+    "about": "Lorem elit exercitation qui elit dolor sint tempor cupidatat anim",
+    "FatherBillId": "28c14c22-1b4b-4611-91d6-a2dd775ff242",
+    "transaId": "45553303-5e2a-4bee-a7e7-d5ac66958a8d",
+    "isDone": "active"
+  },
+  {
+    "company": "LIQUICOM",
+    "payed": 1101.1,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2015-09-10T06:13:53",
+    "about": "ullamco nostrud dolor ex tempor exercitation ipsum consectetur eiusmod aute",
+    "FatherBillId": "97618f4d-1d73-46b8-b146-dc1fa50a8a1d",
+    "transaId": "952ad05d-0391-498a-a04e-b50335b1a414",
+    "isDone": "notactive"
+  },
+  {
+    "company": "VORATAK",
+    "payed": 2424.64,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2014-04-29T04:45:52",
+    "about": "eiusmod ex dolor sit velit et reprehenderit cupidatat deserunt elit",
+    "FatherBillId": "8e98998e-596d-477b-99a6-0fb574d985fc",
+    "transaId": "617dc9c8-0496-4326-ac29-e1da979ba23d",
+    "isDone": "notactive"
+  },
+  {
+    "company": "COMCUR",
+    "payed": 459.5,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2020-07-25T07:18:14",
+    "about": "sit in mollit excepteur sit et voluptate pariatur eiusmod velit",
+    "FatherBillId": "d41309aa-795a-49e8-b2b4-9f4e9fa6cf7b",
+    "transaId": "8562f462-8d25-49cd-9ad0-1eedc7ddf871",
+    "isDone": "notactive"
+  },
+  {
+    "company": "INTRAWEAR",
+    "payed": 1750.76,
+    "FatherBillName": "תלושי חג לעובדים",
+    "date": "2018-07-25T04:07:38",
+    "about": "eiusmod consectetur est consequat ipsum adipisicing quis amet id elit",
+    "FatherBillId": "ec479919-76f6-40bb-b198-efbbbaa6e5f1",
+    "transaId": "53778dca-324c-444d-ac80-b317c3dee54d",
+    "isDone": "notactive"
+  },
+  {
+    "company": "VINCH",
+    "payed": 3143.15,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2019-03-28T09:55:28",
+    "about": "culpa adipisicing aute aliquip deserunt cillum nisi nisi voluptate Lorem",
+    "FatherBillId": "9edb0dbc-389f-464f-8e70-41bdc1323799",
+    "transaId": "ea07dd19-fa87-4d7a-8c1c-1d8625cba12a",
+    "isDone": "active"
+  },
+  {
+    "company": "VOIPA",
+    "payed": 3443.38,
+    "FatherBillName": "תשלום חודשי קבוע",
+    "date": "2017-05-08T06:48:20",
+    "about": "incididunt Lorem voluptate cupidatat magna reprehenderit cupidatat cillum nostrud aute",
+    "FatherBillId": "bfffc7e4-a561-4a09-b34e-a291dd57ff52",
+    "transaId": "bcb82b37-4b73-4a50-98bf-837a2f2b1c32",
+    "isDone": "notactive"
+  },
+  {
+    "company": "KONNECT",
+    "payed": 371.68,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2017-07-28T08:51:21",
+    "about": "ullamco sit nulla qui proident magna sunt culpa mollit nisi",
+    "FatherBillId": "a009586f-1270-4ee6-83f5-8ebeb32d09b7",
+    "transaId": "d5a5f3bd-fd52-4fae-85d6-7513a7350ffc",
+    "isDone": "notactive"
+  },
+  {
+    "company": "INSURITY",
+    "payed": 1492.11,
+    "FatherBillName": "ציוד לעסק",
+    "date": "2016-08-03T03:55:45",
+    "about": "qui ut consectetur laboris sit nostrud ad nulla fugiat pariatur",
+    "FatherBillId": "fe46c07d-a2f6-4d97-ab7f-d105bcf0fa05",
+    "transaId": "a59626b9-a9ad-4bfd-ae5d-9e5281d320fc",
+    "isDone": "active"
+  }
+]

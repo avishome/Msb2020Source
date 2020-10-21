@@ -1,3 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+backgroundPositionY: '-100px',  backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundImage: 'url(https://previews.123rf.com/images/alex011973/alex0119731306/alex011973130600010/20448063-pipette-and-test-tube-on-blue-background.jpg)'
