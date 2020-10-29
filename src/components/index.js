@@ -10,7 +10,8 @@ import NewCharge from './newCharge'
 import NewMsb from './newMsb'
 import Search from './search'
 import UpdateMsb from './updateMsb'
-
+import SummrayTable from "./summray_table";
+import cog from "../placeholders/icons/zondicons/cog.svg"
 import { functionsContext } from '../services/funcContext';
 
 export default class Index extends React.Component {
@@ -18,7 +19,7 @@ export default class Index extends React.Component {
         super(props);
         this.myRef = React.createRef();
         this.state = {
-            searchWord: null,
+            searchWord: "",
             pages: { "ראשי": "fff" },
         };
     }
@@ -39,6 +40,7 @@ export default class Index extends React.Component {
         if (bill1.length < 0) { console.log("problem - selector dont find"); ParseBill["custemors"] = []; return ParseBill; }
         const ParseBill = JSON.parse(JSON.stringify(bill1[0]));
         const relevantBill = billed.filter((bill) => bill["FatherBillId"] === ParseBill["id"]);
+        const afterMsb = relevantBill.filter((item)=>item.isDone!=false).map((item)=>item["custemorId"])
         const jsonGroup = this.groupBy(relevantBill, "custemorId"); // maybe take a many items in same item - each item new line at biiled
         let output = []
         for (const index of Object.keys(jsonGroup)) {
@@ -46,12 +48,13 @@ export default class Index extends React.Component {
         }
         ParseBill["custemors"] = output;
 
-        return ParseBill;
+        return {"selected":ParseBill,"removes":afterMsb};
     }
     createArrDebts(billed,custemores){
         const ParseBill = JSON.parse(JSON.stringify(billed));
-        return ParseBill.filter((item)=>"debtTime" in item).map((item)=>{
-            item["custemore"] = this.idToCustemoreName(custemores, item.custemorId)[1]
+        return ParseBill.filter((item)=>"debtTime" in item && item.payed > 0).map((item)=>{
+            item["custemore"] = this.idToCustemoreName(custemores, item.custemorId)[1];
+            item["status"] = (item.isDone) ? "נגבה מחדש" : (true)? "ממתין לגביה" : "שיהיה קוד ברור"
             return item;
         });
     }
@@ -94,9 +97,10 @@ export default class Index extends React.Component {
             "חבר חדש": () => (linkObj.params) ? this.props.custemores.filter((item) => item.id == linkObj.params) : null,
             "חברים מאקסל": () => null,
             "הגדרות": () => null,
+            "רשימת מסב": () => null,
             "רשימת לקוחות": () => null,
-            "דפי חשבון": () => null,
             "חיוב חדש": () => (linkObj.params && linkObj.params.opCode == "clientNum") ? linkObj.params.clientNum : (linkObj.params && linkObj.params.opCode == "chargeNum")?  this.connectClientsTo1Bill(this.props.bills.filter((item) => item.id == linkObj.params.chargeNum), this.props.billed) : null,
+            "דפי חשבון": () => (linkObj.params) ? linkObj.params : null,
             "יצירת מסב": () => null,
             "עדכון מסב": () => (linkObj.params) ? {"billData":this.getReuqstPay(linkObj.params),"msbEntery":this.props.msbIndex.filter((item) => item.id == linkObj.params)}: null
         }
@@ -106,10 +110,11 @@ export default class Index extends React.Component {
         this.scrollToRef();
     }
     getReuqstPay(fillter = 0) {
+        // fillter is MsbId for display edit
         const notDebtFunc = (item)=> !item.debtTime;
         const fillterFunc = (fillter == 0)?((payed)=>{return !payed.isDone && payed.payed>0}):((payed)=>{return payed.isDone && payed.payed>0 && payed.msbId == fillter});
         
-        return this.props.billed.filter((item)=>fillterFunc(item) && notDebtFunc(item)).map((item) => {
+        return this.props.billed.filter((item)=>fillterFunc(item)).map((item) => {
             item["company"] = this.idToCustemoreName(this.props.custemores,item.custemorId)[1] //need valid
 
             const fatherBill = this.props.bills.filter((bill) => bill.id == item.FatherBillId);
@@ -143,11 +148,12 @@ export default class Index extends React.Component {
         const dic = {
             "ראשי": (<Home arrdebts={this.createArrDebts(this.props.billed,this.props.custemores)} arrbills={this.parserBillsClients(this.props.bills, this.props.billed, this.props.custemores)} msbIndex={this.parserMsbIndex(this.props.msbIndex, this.props.billed, this.props.custemores)}></Home>),
             "חבר חדש": <NewFriend clients={this.props.custemores} update_custemores={(data) => this.props.update_custemores(data)} link={(x) => this.link(x)} close={(x) => this.close(x)}></NewFriend>,
-            "חברים מאקסל": <NewFriendByXls arrCustemores={this.props.custemores}></NewFriendByXls>,
+            "חברים מאקסל": <NewFriendByXls update_custemores={(data) => this.props.update_custemores(data)} arrCustemores={this.props.custemores}></NewFriendByXls>,
             "הגדרות": <Settings></Settings>,
+            "רשימת מסב": <SummrayTable arrData={this.parserMsbIndex(this.props.msbIndex, this.props.billed, this.props.custemores)} link={(x) => this.link(x)} type="msbs"></SummrayTable>,
             "רשימת לקוחות": <FriendsList arrCustemores={this.props.custemores}></FriendsList>,
             "דפי חשבון": <Accuonts msbIndex={this.props.msbIndex} arrCustemores={this.props.custemores} arrbilled={this.props.billed}></Accuonts>,
-            "חיוב חדש": <NewCharge update_charge={(data) => this.props.update_charge(data)} update_bill={(data) => this.props.update_bill(data)} arrCustemores={this.props.custemores}></NewCharge>,
+            "חיוב חדש": <NewCharge update_charge={(data) => this.props.update_charge(data)} update_bill={(data) => this.props.update_bill(data)} remove_bill={(data) => this.props.remove_bill(data)} arrCustemores={this.props.custemores}></NewCharge>,
             "יצירת מסב": <NewMsb update_msb={(data) => this.props.update_msb(data)} update_bill={(data) => this.props.update_bill(data)} arrCustemoreBills={this.getReuqstPay()}></NewMsb>,
             "עדכון מסב": <UpdateMsb update_msb={(data) => this.props.update_msb(data)} update_bill={(data) => this.props.update_bill(data)} arrCustemoreBills={this.getReuqstPay()}></UpdateMsb>
         }
@@ -157,8 +163,9 @@ export default class Index extends React.Component {
                 <div>
                     <div className="w-full h-64" style={{ marginBottom: '-5%' }}>
                         <div className=" mx-auto">
-                            <button onClick={() => this.link("הגדרות")} className="py-8 px-3 text-sm text-black font-semibold bg-gray-300 rounded-bl-full hover:bg-gray-200 cursor-pointer">
-                                הגדרות
+                            <button onClick={() => this.link("הגדרות")} className="py-6 px-3 text-sm text-black font-semibold bg-gray-300 rounded-bl-full hover:bg-gray-200 cursor-pointer">
+                                <img src={cog} />
+                                
                             </button>
                         </div>
                     </div>
@@ -177,7 +184,7 @@ export default class Index extends React.Component {
 
                             </div>
                         </div>
-                        <functionsContext.Provider value={{ link: (x) => this.link(x), close: (x) => this.close(x) }}>
+                        <functionsContext.Provider value={{ link: (x) => this.link(x), close: (x) => this.close(x), createMsb: (x)=>this.props.createMsb(x) }}>
                             <Tabs sons={this.state.pages}
                                 render={
                                     (parms) => (

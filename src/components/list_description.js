@@ -1,7 +1,7 @@
 import React from "react";
-
+import {functionsContext} from '../services/funcContext';
 class ListDescription extends React.Component {
-  
+  static contextType = functionsContext;
   render() {
     return (
       <div className="listBar z-50 tooltip-text flex justify-center p-4 px-3 py-10">
@@ -25,20 +25,19 @@ class ListDescription extends React.Component {
               </div>
               <input
                 className="w-full rounded-md bg-gray-200 text-gray-700 leading-tight focus:outline-none py-2 px-2"
-                id="search"
                 type="text"
                 placeholder="חיפוש לקוח"
               />
             </div>
             <div className="py-3 text-sm">
             {
-                this.props.data.map((item)=> <div key={item[0][0]} className="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
+                this.props.data.map((item)=> <button onClick={()=>this.context.link({"page":"דפי חשבון","params":item[0][0]})} key={item[0][0]} className="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
                 <span className={"bg-"+(((item[0][2])=="active")?"green":"red")+"-400 h-2 w-2 m-2 rounded-full"} />
               <div className="flex-grow font-medium px-2">{item[0][1]}</div>
                 <div className="text-sm font-normal text-gray-500 tracking-wide">
                 {item[1]}
                 </div>
-              </div>)
+              </button>)
               }
               
             </div>

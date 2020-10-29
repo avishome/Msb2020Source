@@ -1,5 +1,6 @@
 import React from "react";
 import {CSVToArray} from '../tools/xlsParser';
+import {functionsContext} from '../services/funcContext';
 //import per from '../tools/person.json';
 class MySelect extends React.Component {
     constructor(props) {
@@ -37,6 +38,7 @@ export default class WorpClass extends React.Component {
             afterTreat: [{}]
         };
     }
+    static contextType = functionsContext;
     getdata(value) {
         const dic = [
             "name", "id", "address", "email", "accuntnum", "brancenum", "banknum"
@@ -60,6 +62,13 @@ export default class WorpClass extends React.Component {
         console.log(output)
         this.setState({ afterTreat: output });
     }
+    submit(){
+        this.state.afterTreat.map((item)=>{
+            this.props.update_custemores(item)
+            return null;
+        });
+        this.context.close("חברים מאקסל")
+    }
     render() {
         return <div className="xl:flex flex-row justify-between shadow-md border rounded-md">
             <div
@@ -82,7 +91,7 @@ export default class WorpClass extends React.Component {
             </div>
             <div className="relative flex flex-col xl:w-3/4">
                 <div className="mx-auto px-4 sm:px-8">
-                    <MyTable data={this.state.afterTreat} />
+                    <MyTable submit={()=>this.submit()} data={this.state.afterTreat} />
                 </div>
 
             </div>
@@ -208,10 +217,10 @@ class MyTable extends React.Component {
                     className="text-xs xs:text-sm text-gray-900">מציג {this.state.elements.length} חברים מתוך {this.state.allElements.length}</span>
                 </div>
             </div>
-            <div className="items-center w-full flex flex-col">
+            <button onClick={()=>this.props.submit()} className="items-center w-full flex flex-col">
                 <a
                     className="inline-block my-4 py-4 px-8 leading-none text-white bg-indigo-500 hover:bg-indigo-600 rounded shadow"
-                    href="#">יבוא לקוחות</a></div>
+                    href="#">יבוא לקוחות</a></button>
         </div>
     }
 }

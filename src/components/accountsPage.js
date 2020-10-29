@@ -1,13 +1,22 @@
 import React from "react";
 import SummrayTable from "./summray_table";
 import { functionsContext } from '../services/funcContext';
+import editSvg from "../placeholders/icons/zondicons/edit-pencil.svg"
+import shtrodelSvg from "../placeholders/icons/zondicons/at-symbol.svg"
+import printer from "../placeholders/icons/zondicons/printer.svg"
+import creditcard from "../placeholders/icons/zondicons/credit-card.svg"
+import documentadd from "../placeholders/icons/zondicons/document-add.svg"
+import face from "../placeholders/icons/zondicons/user-solid-square.svg"
 class AccountsPage extends React.Component {
   constructor(props) {
     super(props);
+    let us = (props.edit > 0) ? props.edit : 12345
     this.state = {
-      user: 12345
+      user: us
+      , explain: <div></div>
     };
   }
+
   static contextType = functionsContext;
   groupBy(xs, key) {
     return xs.reduce(function (rv, x) {
@@ -30,7 +39,7 @@ class AccountsPage extends React.Component {
 
       Table.push({
         "transaId": msb.id,
-        "date": msb.updateTime,
+        "msbTime": (msb.updateTime!=="")?msb.updateTime:msb.createTime,
         "payed": totalTaxes,
         "status": msb.status,
         "total": true
@@ -42,17 +51,20 @@ class AccountsPage extends React.Component {
       let isDebt = item.isDone == "notactive" && item.payed == 0;
       let debt = (isDebt && this.props.arrbilled.filter((debt) => item.paidway == debt.transaId).length) ? this.props.arrbilled.filter((debt) => item.paidway == debt.transaId)[0].payed : 0;
       let status = (isDebt) ? "גביה נכשלה" : (item.msbId > 0) ? this.props.msbIndex.filter((msb) => msb.id == item.msbId)[0].status : "ממתין לגביה";
+      let msbTime = (item.msbId > 0) ? this.props.msbIndex.filter((msb) => msb.id == item.msbId)[0].createTime : "ממתין לגביה";
       return {
         "transaId": item.transaId,
-        "subject": (item.FatherBillName)?item.FatherBillName:"גביית חוב",
-        "date": (item.FatherDate)?item.FatherDate:item.debtTime,
+        "subject": (item.FatherBillName) ? item.FatherBillName : "גביית חוב",
+        "date": (item.FatherDate) ? item.FatherDate : item.debtTime,
         "status": status,
         "payed": (isDebt) ? debt : item.payed,
-        "total": false
+        "total": false,
+        "msbTime" : msbTime
       }
     })
 
     Table = Table.concat(TableCharge)
+    Table.sort(function(a, b){if(typeof(b.msbTime)=="string") return 1; if(typeof(a.msbTime)=="string") return -1; return b.msbTime-a.msbTime});
     /*    {"subject","date","status","payed"}
     {"date","status","payed"}
     */
@@ -84,7 +96,7 @@ class AccountsPage extends React.Component {
         </div>
         <div className="mb-8">
           <div className="px-4 mb-2 text-white flex justify-between items-center">
-            <div className>נצפו לאחרונה</div>
+            <div>נצפו לאחרונה</div>
             <div>
               <svg className="fill-current h-4 w-4 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <path d="M11 9h4v2h-4v4H9v-4H5V9h4V5h2v4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z" />
@@ -98,18 +110,21 @@ class AccountsPage extends React.Component {
         </div>
         <div className="mb-8">
           <div className="px-4 mb-2 text-white flex justify-between items-center">
-            <div className>שאר הלקוחות</div>
-            <div className="cursor-pointer">
+            <div>שאר הלקוחות</div>
+            <button className="cursor-pointer" onClick={() => this.context.link("חבר חדש")} >
               <svg className="fill-current h-4 w-4 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                 <path d="M11 9h4v2h-4v4H9v-4H5V9h4V5h2v4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z" />
               </svg>
-            </div>
+            </button>
           </div>
           {this.props.arrCustemores.map((client) => {
             return (
-              <button onClick={()=>this.setState({user:client.id})} key={client.id} className="flex items-center mb-3 px-4">
+              <button onClick={() => this.setState({ user: client.id })} key={client.id} className="flex items-center mb-3 px-4">
                 <span className="bg-green rounded-full block w-2 h-2 mr-2" />
-                <span className="text-white ">{client.name}</span>
+                <img alt="face" src={face} />
+                <span className="text-white ">
+                  {client.name}
+                </span>
               </button>)
           })}
         </div>
@@ -119,48 +134,69 @@ class AccountsPage extends React.Component {
 
       <div className="flex-1 flex flex-col bg-white overflow-hidden">
 
-        <div className="border-b flex bg-blue-200 px-6 py-2 items-center flex-none">
-          <div className="flex flex-col w-1/6 justify-between">
+        <div onMouseOut={() => this.setState({ explain: null })} className="border-b flex bg-blue-200 px-6 py-2 items-center flex-none">
+          <div className="flex flex-col w-2/6 justify-between">
             <h3 className="text-grey-darkest mb-1 font-extrabold">
-        {this.props.arrCustemores.filter((x)=>x.id==this.state.user)[0].name}</h3>
+              {this.props.arrCustemores.filter((x) => x.id == this.state.user)[0].name}</h3>
             <div className="text-grey-dark text-sm truncate">
-              04-55733461 {this.props.arrCustemores.filter((x)=>x.id==this.state.user)[0].email}
-                </div>
+              04-55733461 {this.props.arrCustemores.filter((x) => x.id == this.state.user)[0].email}
+            </div>
           </div>
-          <button onClick={() => this.context.link({ "page": "חיוב חדש", "params": { "opCode": "clientNum", "clientNum": this.state.user } })} className="flex flex-col w-1/8 justify-between mr-2">
-            <a className="text-grey-darkest mb-1">
-              חיוב חדש</a>
-            <div className="text-grey-dark text-sm truncate">
-              הוספת חיוב חדש
-                </div>
-          </button>
           <div className="flex flex-col w-1/6 justify-between mr-2">
-            <a href="newcharge.html?user=משה כהן" className="text-grey-darkest mb-1">
-              דיווח תשלום</a>
-            <div className="text-grey-dark text-sm truncate">
-              על תשלום שהתבצע לא בה"ק
+            <button onClick={() => this.context.link({ "page": "חיוב חדש", "params": { "opCode": "clientNum", "clientNum": Number(this.state.user) } })} className="flex flex-col w-1/8 justify-between mr-2">
+
+              <img alt="חיוב חדש" onMouseOver={() => this.setState({
+                explain: <div className="text-grey-dark text-sm truncate">
+                  הוספת חיוב חדש
                 </div>
+              })} src={documentadd} title="חיוב חדש"></img>
+
+
+            </button>
+          </div>
+          <div className="flex flex-col w-1/6 justify-between mr-2">
+            <img alt="דיווח תשלום" onMouseOver={() => this.setState({
+              explain: <div className="text-grey-dark text-sm truncate">
+                דיווח תשלום על תשלום שהתבצע לא בה"ק
+                </div>
+            })} src={creditcard} title="דיווח תשלום"></img>
+
+
+
           </div>
           <button onClick={() => this.context.link({ "page": "חבר חדש", "params": this.state.user })} className="flex flex-col w-1/6 justify-between mr-2">
-            <a className="text-grey-darkest mb-1">
-              עריכת פרטי חבר</a>
-            <div className="text-grey-dark text-sm truncate">
-              שינוי שם, פרטי חשבון וכו
+            <img alt="עריכת פרטים" onMouseOver={() => this.setState({
+              explain: <div className="text-grey-dark text-sm truncate">
+                שינוי שם, פרטי חשבון וכו
                 </div>
+            })} src={editSvg} title="עריכת פרטי חבר"></img>
+
+
           </button>
           <div className="flex flex-col w-1/6 justify-between mr-2">
-            <a href="newcharge.html?user=משה כהן" className="text-grey-darkest mb-1">
-              הדפסה</a>
-            <div className="text-grey-dark text-sm truncate">
-              או שליחה במייל
+            <img alt="שליחת מייל" onMouseOver={() => this.setState({
+              explain: <div className="text-grey-dark text-sm truncate">
+                שלח פירוט חשבון למייל הלקוח
                 </div>
+            })} src={shtrodelSvg} title="שלח פירוט חשבון למייל" />
           </div>
+          <div className="flex flex-col w-1/6 justify-between mr-2">
+            <img alt="הדפסה" onMouseOver={() => this.setState({
+              explain: <div className="text-grey-dark text-sm truncate">
+                הדפסת פירוט חשבון
+                </div>
+            })} src={printer} title="הדפסת דף חשבון" />
+          </div>
+
+        </div>
+        <div className="bg-blue-300 block">
+          {this.state.explain}
         </div>
         <div className="border-b flex bg-gray-200 px-6 py-2 items-center flex-none">
           <div className="flex w-full">
             <div className="text-grey-dark w-1/3 text-sm truncate">
               ממתין לגביה:
-              {" " + this.props.arrbilled.filter((x) => x.isDone === false && x.custemorId == this.state.user).reduce(function (sum, pay) {
+              {" " + this.props.arrbilled.filter((x) => x.isDone == false && x.custemorId == this.state.user).reduce(function (sum, pay) {
               return sum + pay.payed;
             }, 0)} ש"ח
             </div>
@@ -176,8 +212,8 @@ class AccountsPage extends React.Component {
               סה"כ תשלומים:
               {" " + this.props.arrbilled.filter((item) =>
               item.custemorId == this.state.user &&
-              item.isDone === true && item.msbId > 0 &&
-              this.props.msbIndex.filter((msb) => msb.id == item.msbId)[0].updateTime != ""
+              item.isDone == true && item.msbId > 0 &&
+              this.props.msbIndex.filter((msb) => msb.id == item.msbId)[0].updateTime !== ""
             ).reduce(function (sum, pay) {
               return sum + pay.payed;
             }, 0)}

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import closesolid from '../placeholders/icons/close.svg'
 class Tab extends React.Component {
     static propTypes = {
         activeTab: PropTypes.string.isRequired,
@@ -33,7 +34,9 @@ class Tab extends React.Component {
             >
                 {label}
             </button>
-            <button className={"bg-gradient-to-l from-white rounded-tl px-2 border-t " + ((label == "ראשי")?" ":"hover:bg-red-200")} onClick={()=>{this.props.closeFunc(this.props.label)}}></button>
+                <button className={"bg-gradient-to-l from-white rounded-tl border-t " + ((label == "ראשי") ? "px-2" : "hover:bg-red-200")} onClick={() => { this.props.closeFunc(this.props.label) }}>
+                {(label == "ראשי")?null:<img src={closesolid} alt="close" style={{"width": "17px"}} />}
+                </button>
             </>
         );
     }

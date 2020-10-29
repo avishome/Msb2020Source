@@ -122,6 +122,17 @@ export default class MyTable extends React.Component {
         this.setState({ allElements: tempElem }); // save updates
 
     }
+    cancel(){
+        if(!this.props.edit || this.props.edit.msbEntery[0].status != "ממתין לאישור") {return false;};
+        this.state.allElements.map((item) => {
+            item = JSON.parse(JSON.stringify(item))
+            item["isDone"] = false;
+            item["date"] = "";
+            item["msbId"] = -1;
+            return item;
+          }).map((item)=> this.props.update_bill(item));
+          this.context.close("עדכון מסב");
+    }
     submit() {
         const sum = this.state.allElements.filter((item) => item.isDone == "notactive" || item.isDone === false).map((item) => {
             item = JSON.parse(JSON.stringify(item))
@@ -188,9 +199,9 @@ render() {
                 </div>
             </div>
             <div className="flex flex-row mb-1 sm:mb-0">
-                <a
+                <button onClick={()=>this.cancel()}
                     className="inline-block py-1 px-8 text-white bg-red-200 hover:bg-indigo-600 rounded shadow"
-                    href="#">להשאיר חוב (25)</a>
+                    href="#">קובץ לא נשלח - מחיקה</button>
             </div>
         </div>
         <div className="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4">

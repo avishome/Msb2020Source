@@ -1,5 +1,4 @@
 import React from "react";
-import ServiceClients from "../services/ServiceFreinds"
 import {functionsContext} from '../services/funcContext';
 export default class NewFriend extends React.Component {
   constructor(props) {
@@ -19,7 +18,6 @@ export default class NewFriend extends React.Component {
     let id = this.props.edit;
     if(id && 'length' in id && id.length)
       this.state = id[0];
-    console.log(props.edit)
   }
   static contextType = functionsContext;
   changeP(key, e) {

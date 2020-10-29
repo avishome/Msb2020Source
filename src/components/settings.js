@@ -40,6 +40,19 @@ export default class Settings extends React.Component {
                                 שמירה</h2>
                         </div>
                     </div>
+                    <div className="w-full flex flex-wrap">
+                        <div className="w-full md:w-1/2 px-2 mb-6 mt-4">
+                            <h2 className="text-2xl">מספר מוסד שולח</h2>
+                            <h2 className="text-1xl text-gray-500">המוסד שמעביר את קובץ המסב</h2>
+                        </div>
+                        <div className="w-full md:w-1/2 px-2 text-center  mt-4">
+                            <input className="rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b sm:pl-8 sm:pr-8 py-4 w-3/5 bg-white sm:text-1xl placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none" placeholder="מספר מוסד בן 5 ספרות" disabled />
+                            <h2 className="sm:inline text-1xl text-gray-500" title="$(this).next().show();$(this).prev().removeAttr('disabled');$(this).hide()">עריכה
+          </h2>
+                            <h2 className="hidden inline text-1xl text-gray-500" title="$(this).prev().show();$(this).prev().prev().attr('disabled','true');$(this).hide()">
+                                שמירה</h2>
+                        </div>
+                    </div>
                 </div>
                 <div className="flex flex-wrap -mx-2 border-b-2 pb-8 mt-8">
                     <div className="w-full md:w-1/2 px-2 lg:pr-16 mb-6 lg:mb-0">

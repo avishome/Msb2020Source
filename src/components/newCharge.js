@@ -6,25 +6,27 @@ export default class Index extends React.Component {
     this.state = {
       id: Math.round(Math.random()*100000), //must create bettter select
       subject: "",
-      date: "",
+      date: new Date(Date.now()).toLocaleDateString(),
       price: "",
       notes: "",
-
+      bannedCustemors: [],
       custemors: [],
       filtor: ""
     };
     let id = this.props.edit;
-    if(typeof(id)== "object" && id && !('length' in id) && id.id){
-      this.state["id"] = id.id;
-      this.state["notes"] = id.notes;
-      this.state["date"] = id.date;
-      this.state["price"] = id.price;
-      this.state["subject"] = id.subject;
-      this.state["custemors"] = JSON.parse(JSON.stringify( id.custemors));
+    if(typeof(id)== "object" && id && !('length' in id) && id.selected){
+      const oldValue = id.selected;
+      this.state["id"] = oldValue.id;
+      this.state["notes"] = oldValue.notes;
+      this.state["date"] = oldValue.date;
+      this.state["price"] = oldValue.price;
+      this.state["subject"] = oldValue.subject;
+      this.state["custemors"] = JSON.parse(JSON.stringify(oldValue.custemors)).filter((item)=>!id.removes.includes(item));
+      this.state["bannedCustemors"] = id.removes
     }
 
     if(typeof(id)=="number"){
-      this.state["custemors"] = [id];
+      this.state["custemors"] = [Number(id)];
     }
   }
   static contextType = functionsContext;
@@ -33,11 +35,25 @@ export default class Index extends React.Component {
     this.props.update_charge({
       id: s.id,
       subject: s.subject,
-      date: s.date,
+      date: String(Date.parse(s.date.replaceAll(".","/").replace(/([0-9]+)\/([0-9]+)/,'$2/$1'))),
       price: Number(s.price),
       notes: s.notes
     });
-    s.custemors.map((id)=>this.props.update_bill(
+    //need find stiil selected, and remove canceled.
+    let forAdd = s.custemors;
+    let forRemove = []
+    const id = this.props.edit;
+    if(typeof(id)== "object" && id && !('length' in id) && id.selected){
+      forAdd = s.custemors.filter((el)=> {
+        return !this.props.edit.selected.custemors.includes( el );
+      } );
+      forRemove = this.props.edit.selected.custemors.filter((item)=>!id.removes.includes(item)).filter( (el)=> {
+        return !s.custemors.includes( el );
+      } );
+    }
+    console.log(forAdd,forRemove)
+    forRemove.map((id)=>this.props.remove_bill({"transaId":s.id+"-"+id+"*1"}));
+    forAdd.map((id)=>this.props.update_bill(
       {"transaId": s.id+"-"+id+"*1", // optional for take many piceses
       "FatherBillId": s.id,
       "msbId": -1,
@@ -56,7 +72,9 @@ export default class Index extends React.Component {
 
   select(x) {
     if (typeof (x) == "number") x = [x];
-    this.setState((state, props) => ({ custemors: state.custemors.concat(x) }))
+    const xAfterFilter = x.filter((num)=>!this.state.bannedCustemors.includes(num))
+    if(!xAfterFilter.length) return;
+    this.setState((state, props) => ({ custemors: state.custemors.concat(xAfterFilter) }))
   }
   remove(x) {
     this.setState((state, props) => ({ custemors: state.custemors.filter((item) => item != x) }))
@@ -111,10 +129,11 @@ export default class Index extends React.Component {
               <section className="w-full">
                 <div className="flex flex-wrap text-center">
                   {this.props.arrCustemores.filter((x) => !this.state.custemors.includes(x.id) && x.name.includes(this.state.filtor)).map((client) =>
-                    <button onClick={() => this.select(client.id)} key={client.id} className="relative w-full xl:w-5/12 py-2 px-10 m-1 mb-0 hover:bg-blue-100 cursor-pointer border-gray-200 border-b-2">
+                    <button onClick={() => this.select(client.id)} key={client.id} className={"relative w-full xl:w-5/12 py-2 px-10 m-1 mb-0 cursor-pointer border-gray-200 border-b-2 " + (this.state["bannedCustemors"].includes(client.id)? "bg-red-100" : "hover:bg-blue-100" )}>
                       <div className="absolute top-0 right-0 h-5 w-5" />
                       <p>
                         {client.name}
+                        {(this.state["bannedCustemors"].includes(client.id))?" (נשלח למסב)":null}
                       </p>
                     </button>)}
 

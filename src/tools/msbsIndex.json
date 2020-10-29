@@ -1,18 +1,2 @@
 [
-    {
-        "id": 15,
-        "total": 12334,
-        "createTime": "12/10/2019",
-        "updateTime": "",
-        "status": "טיוטא",
-        "reason": "text text text"
-    },
-    {
-        "id": 16,
-        "total": 134,
-        "createTime": "13/10/2020",
-        "updateTime": "",
-        "status": "ממתין לאישור",
-        "reason": "text text text"
-    }
 ]

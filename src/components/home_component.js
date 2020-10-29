@@ -1,6 +1,6 @@
 import React from "react";
 import SummrayTable from "./summray_table";
-import {functionsContext} from '../services/funcContext';
+import { functionsContext } from '../services/funcContext';
 class HomeComponent extends React.Component {
   static contextType = functionsContext;
   render() {
@@ -9,7 +9,7 @@ class HomeComponent extends React.Component {
         <section className="p-4">
           <div className="flex flex-wrap text-center">
             <button
-              onClick = {()=>this.context.link("חיוב חדש")}
+              onClick={() => this.context.link("חיוב חדש")}
               className="md:w-1/2 py-4 md:px-10 mb-4 md:mb-0 md:border-l hover:bg-blue-100 cursor-pointer"
             >
               <img
@@ -24,7 +24,7 @@ class HomeComponent extends React.Component {
               </p>
             </button>
             <button
-              onClick = {()=>this.context.link("חבר חדש")}
+              onClick={() => this.context.link("חבר חדש")}
               className="md:w-1/2 py-4 md:px-10 mb-4 md:mb-0 hover:bg-blue-100 cursor-pointer"
             >
               <img
@@ -47,14 +47,30 @@ class HomeComponent extends React.Component {
                 <div className="flex items-center justify-between py-3 px-4 border-b">
                   <h3 className="text-lg font-heading">ממתינים לפירעון</h3>
                   <button
-                    onClick = {()=>this.context.link("יצירת מסב")}
+                    onClick={() => this.context.link("יצירת מסב")}
                     className="py-1 px-3 text-sm text-white font-semibold bg-green-500 rounded-full hover:bg-green-600 cursor-pointer"
                   >
                     שליחה למס"ב
                   </button>
                 </div>
                 <div className="flex flex-col p-4">
-                  <SummrayTable arrData={this.props.arrbills} link={(x)=>this.context.link(x)} type="charges"></SummrayTable>
+                  <SummrayTable arrData={this.props.arrbills} link={(x) => this.context.link(x)} type="charges"></SummrayTable>
+                </div>
+              </div>
+            </div>
+            <div className="w-full lg:w-1/2 px-4 mb-4">
+              <div className="h-full border rounded shadow">
+                <div className="flex items-center justify-between py-3 px-4 border-b">
+                  <h3 className="text-lg font-heading">קבצי מס"ב אחרונים</h3>
+                  <button  onClick={()=>this.context.link("רשימת מסב")}
+                    className="py-1 px-3 text-sm text-white font-semibold bg-green-500 rounded-full hover:bg-green-600 cursor-pointer"
+                  >
+                    עוד
+                  </button>
+                </div>
+                <div className="flex flex-col p-4">
+                  <SummrayTable arrData={this.props.msbIndex} link={(x) => this.context.link(x)} type="msbs"></SummrayTable>
+
                 </div>
               </div>
             </div>
@@ -63,30 +79,14 @@ class HomeComponent extends React.Component {
                 <div className="flex items-center justify-between px-4 py-3 border-b">
                   <h3 className="text-lg font-heading">חובות</h3>
                   <span
-                    
+
                     className="py-1 px-3 text-sm text-white font-semibold bg-red-500 rounded-full hover:bg-red-600 cursor-pointer"
                   >
                     עדכון
                   </span>
                 </div>
                 <div className="flex flex-col p-4">
-                  <SummrayTable arrData={this.props.arrdebts} link={(x)=>this.context.link(x)} type="debts"></SummrayTable>
-                </div>
-              </div>
-            </div>
-            <div className="w-full lg:w-1/2 px-4 mb-4">
-              <div className="h-full border rounded shadow">
-                <div className="flex items-center justify-between py-3 px-4 border-b">
-                  <h3 className="text-lg font-heading">קבצי מס"ב אחרונים</h3>
-                  <span
-                    className="py-1 px-3 text-sm text-white font-semibold bg-green-500 rounded-full hover:bg-green-600 cursor-pointer"
-                  >
-                    עוד
-                  </span>
-                </div>
-                <div className="flex flex-col p-4">
-                  <SummrayTable arrData={this.props.msbIndex} link={(x)=>this.context.link(x)} type="msbs"></SummrayTable>
-                  
+                  <SummrayTable arrData={this.props.arrdebts} link={(x) => this.context.link(x)} type="debts"></SummrayTable>
                 </div>
               </div>
             </div>
@@ -95,7 +95,7 @@ class HomeComponent extends React.Component {
                 <div className="flex items-center justify-between px-4 py-3 border-b">
                   <h3 className="text-lg font-heading">דפי חשבון</h3>
                   <button
-                    onClick = {()=>this.context.link("רשימת לקוחות")}
+                    onClick={() => this.context.link("רשימת לקוחות")}
                     className="py-1 px-3 text-sm text-white font-semibold bg-green-500 rounded-full hover:bg-green-600 cursor-pointer"
                   >
                     רשימת לקוחות
