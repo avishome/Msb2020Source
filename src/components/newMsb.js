@@ -128,32 +128,58 @@ export default class MyTable extends React.Component {
   }
   submit() {
     if (this.state.allElements.filter((item) => item.isDone == "active").length == 0) return;
-    //this.props.update_bill();
     const msbId = Math.round(Math.random() * 10000000)
-    const sum = this.state.allElements.filter((item) => item.isDone == "active").map((item) => {
+    const jsonGroup = this.groupBy(this.state.allElements.filter((item) => item.isDone === "active" || item.isDone === true).map((item) => {
       item = JSON.parse(JSON.stringify(item))
       item["isDone"] = true;
       item["date"] = (new Date()).getTime();
       item["msbId"] = msbId;
       return item;
-    }).map((item) => (this.props.update_bill(item)) ? item : { "payed": 0 }).map((item) => item.payed).reduce((a, b) => a + b, 0);
+    }), "client")
+    Object.keys(jsonGroup).map((index) => {
+      const value = jsonGroup[index];
+      const totalTaxes = value.reduce(function (sum, pay) {
+        return sum + pay.payed;
+      }, 0);
+      return { "client": index, payed: totalTaxes, "payed": totalTaxes, "msbId": value[0].msbId, "date": value[0].date }
+    }).map((item) => {
+      this.props.arrbills.map((bill) => {
+        let editbill = JSON.parse(JSON.stringify(bill));
+        editbill.isDone = true;
+        console.log(editbill)
+        return editbill
+
+      }).map((update) => this.props.update_bill(update));
+      return item
+    }).map((item) => {
+      this.props.update_payment({
+        "transaId": String(msbId) + item.client,
+        "msbId": item.msbId,
+        "custemorId": item.client,
+        "payed": item.payed,
+        "method": "הוראת קבע",
+        "seccess": false,
+        "reason": "",
+        "date": item.date
+      });
+    })
+
 
     let msb = {
       "id": msbId,
-      "total": sum,
+      "total": 0,
       "createTime": (new Date()).getTime(),
       "updateTime": "",
       "status": "ממתין לאישור",
       "reason": ""
     }
-
     this.props.update_msb(msb);
     this.context.close("יצירת מסב");
   }
   render() {
     const items = []
     for (const [index, value] of this.state.elements.entries()) {
-      items.push(<RowTable selectFilter={() => console.log("do something", this.state.filterKey)} key={value.transaId} toggelActive={() => this.active(value.transaId)} target={value} />)
+      items.push(<RowTable selectFilter={() => console.log("do something", this.state.filterKey)} key={value.id} toggelActive={() => this.active(value.transaId)} target={value} />)
     }
     return <div className="py-8 px-1">
       <div className="my-2 flex justify-between w-full sm:flex-row flex-col">
@@ -220,7 +246,7 @@ export default class MyTable extends React.Component {
 }
 class RowTable extends React.Component {
   render() {
-    return <tr className={(this.props.target._title ? 'group' : ("debtTime" in this.props.target)?"bg-red-100":"")}>
+    return <tr className={(this.props.target._title ? 'group' : ("debtTime" in this.props.target) ? "bg-red-100" : "")}>
       <td className="px-5 border-b overflow-hidden border-gray-200 text-sm">
         <div className="flex items-center">
           <div className="flex-shrink-0 w-10 h-10"><label className="inline-flex items-center mt-3">
@@ -233,7 +259,7 @@ class RowTable extends React.Component {
       </td>
       <BodyLine value={this.props.target.company} />
       <BodyLine value={this.props.target.payed} />
-      <BodyLine value={(("debtTime" in this.props.target)?"חוב - ":"") +this.props.target.FatherBillName} />
+      <BodyLine value={(("debtTime" in this.props.target) ? "חוב - " : "") + this.props.target.FatherBillName} />
       <BodyLine value={this.props.target.FatherDate} />
       <BodyLine value={this.props.target.about} />
 

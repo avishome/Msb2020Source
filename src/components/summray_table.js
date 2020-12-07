@@ -15,7 +15,7 @@ class SummrayTable extends React.Component {
             (this.props.type == 'msbs') ? this.props.arrData.map((x) => <SummaryRowMsbs key={x.id} data={x} link={(x) => this.props.link(x)} />) : null
           }
           {
-            (this.props.type == 'debts') ? this.props.arrData.map((x) => <SummaryRowDebts key={x.transaId} data={x} link={(x) => this.props.link(x)} />) : null
+            (this.props.type == 'debts') ? this.props.arrData.map((x) => <SummaryRowDebts key={x.id} data={x} link={(x) => this.props.link(x)} />) : null
           }
           {
             (this.props.type == 'charges_user') ? this.props.arrData.map((x) => <SummaryRowChargeUser key={x.transaId} data={x} link={(x) => this.props.link(x)} />) : null

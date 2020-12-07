@@ -1,0 +1,12 @@
+[
+    {
+    "transaId":"37863-12345*1",
+    "msbId": -1,
+    "custemorId": 12345,
+    "payed": 100,
+    "method" : "מזומן",
+    "seccess": false,
+    "reason" : "",
+    "date": 1604230407213
+    }
+]

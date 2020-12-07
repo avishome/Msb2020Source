@@ -1,16 +1,18 @@
 import React from 'react';
-import bills from '../tools/bills.json';
+import bills from '../tools/templates.json';
 import custemores from '../tools/person.json';
 import msbIndex from '../tools/msbsIndex.json'
-import billed from '../tools/billed.json'
+import billed from '../tools/receipts.json'
+import payments from '../tools/payments.json'
 import Index from '../components/index';
-import { CreateMsb } from "./fireBaseContactor"
+import { CreateMsb, CreateReceipt } from "./electronContactor"
 
 
 export default class DataContext extends React.Component {
     constructor() {
         super();
         this.state = {
+            payments: payments,
             bills: bills,
             custemores: custemores,
             msbIndex: msbIndex,
@@ -18,9 +20,12 @@ export default class DataContext extends React.Component {
             update_custemores: (data) => this.update_custemores(data),
             update_charge: (data) => this.update_charge(data),
             update_bill: (data) => this.update_bill(data),
+            update_payment: (data) => this.update_payment(data),
             update_msb: (data) => this.update_msb(data),
             remove_bill: (data) => this.remove_bill(data),
-            createMsb: (number) => this.CreateMsb(number)
+            remove_payment: (data) => this.remove_payment(data),
+            createMsb: (number) => this.CreateMsb(number),
+            createReceipt: (data) => this.CreateReceipt(data)
         };
 
     }
@@ -29,7 +34,8 @@ export default class DataContext extends React.Component {
         const ShekelInt = (num)=>String(Math.floor(num));
         const AgurotInt = (num)=>String(((num)%1).toFixed(2)*100);
 
-        const ByClients = groupBy(this.state.billed.filter((items) => items.msbId == number), "custemorId");
+        const ByClients = groupBy(this.state.payments.filter((items) => items.msbId == number), "custemorId");
+        console.log(ByClients)
         const Users = Object.keys(ByClients).map((Client)=>{
             const valueArr = ByClients[Client];
             const totalTaxes = valueArr.reduce(function (sum, pay) {
@@ -57,6 +63,9 @@ export default class DataContext extends React.Component {
             "move": Users
         }
         CreateMsb(DATA);
+    }
+    CreateReceipt(data){
+        CreateReceipt(data);
     }
     help_update_custemores(state, data) {
         let f = JSON.parse(JSON.stringify(state.custemores))
@@ -102,28 +111,29 @@ export default class DataContext extends React.Component {
         if (index == -1) {
             f.push(data)
         } else {
-            // in msb - change isDone to True and put price. after that his responsibaly to put new charge - to complit the pay (if need).
-            if (!f[index].isDone)
-                f[index] = data
-            else {
-                if (data.payed == 0) {
-                    f[index] = data
-                } else {
-                    if (f[index].isDone && !data.isDone) {
-                        //only if msb is "ממתין לאישור"
-                        f[index] = data
-                    } else {
-                        console.log("your change not allow - becouse the charge is done!", data, f[index])
-                        return false;
-                    }
-                }
-            }
+            f[index]=data
         }
         return f;
     }
 
     update_bill(data) {
-        return this.bill_asinc(data, this.help_update_bill)
+        return this.edit_asinc(data, this.help_update_bill,"billed")
+    }
+
+    help_update_payment(state, data) {
+        console.log(data)
+        let f = JSON.parse(JSON.stringify(state.payments))
+        const index = f.findIndex(x => x.transaId == data.transaId)
+        if (index == -1) {
+            f.push(data)
+        } else {
+            f[index] = data
+        }
+        return f;
+    }
+
+    update_payment(data) {
+        return this.edit_asinc(data, this.help_update_payment,"payments")
     }
 
     help_remove_bill(state, data) {
@@ -137,13 +147,28 @@ export default class DataContext extends React.Component {
         return f;
     }
 
-    remove_bill(data) {
-        return this.bill_asinc(data, this.help_remove_bill)
+    help_remove_payment(state, data) {
+        let f = JSON.parse(JSON.stringify(state.billed))
+        const index = f.findIndex(x => x.transaId == data.transaId)
+        if (index == -1) {
+            return false
+        } else {
+            f = f.filter(x => x.transaId != data.transaId)
+        }
+        return f;
     }
 
-    bill_asinc(data, func) {
+    remove_bill(data) {
+        return this.edit_asinc(data, this.help_remove_bill,"billed")
+    }
+
+    remove_payment(data) {
+        return this.edit_asinc(data, this.help_remove_payment,"payments")
+    }
+
+    edit_asinc(data, func, key) {
         if (func(this.state, data)) {
-            this.setState((state, props) => ({ billed: func(state, data) }))
+            this.setState((state, props) => ({ [key]: func(state, data) }))
             return true;
         }
         return false;
