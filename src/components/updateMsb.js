@@ -47,9 +47,18 @@ class BodyLine extends React.Component {
 export default class MyTable extends React.Component {
     constructor(props) {
         super(props);
+
+        const firstEdit = (this.props.edit.msbEntery[0].status == "ממתין לאישור");
+       
+        const data = (firstEdit)?this.props.edit.billData.map(item =>{ 
+                const forreturn = JSON.parse(JSON.stringify(item));
+                forreturn["isDone"] = true;
+                return forreturn;
+            }):this.props.edit.billData;
+   
         this.state = {
-            elements: this.props.edit.billData,
-            allElements: this.props.edit.billData,
+            elements: data,
+            allElements: data,
             filterKey: "ALL",
             reason: {}
         };
@@ -124,42 +133,40 @@ export default class MyTable extends React.Component {
     }
     cancel(){
         if(!this.props.edit || this.props.edit.msbEntery[0].status != "ממתין לאישור") {return false;};
+        ///todo - dont work...
+        /*this.state.allElements.map((item) => {
+            return {"transaId":item["msbId"]+item["custemorId"]};
+          }).map((item)=> this.props.remove_payment(item));
+          */
+        
         this.state.allElements.map((item) => {
             item = JSON.parse(JSON.stringify(item))
             item["isDone"] = false;
             item["date"] = "";
             item["msbId"] = -1;
             return item;
-          }).map((item)=> this.props.update_bill(item));
+          }).map((item)=> this.props.update_payment(item));
           this.context.close("עדכון מסב");
+
+          
     }
     submit() {
-        const sum = this.state.allElements.filter((item) => item.isDone == "notactive" || item.isDone === false).map((item) => {
+        this.state.allElements.filter((item) => item.isDone === "notactive" || item.isDone === false).map((item) => {
             item = JSON.parse(JSON.stringify(item))
-            //create new hov
-            this.props.update_bill(
-                {
-                    "transaId": item["transaId"] + "_0",
-                    "FatherBillId": item["FatherBillId"],
-                    "msbId": -1,
-                    "custemorId": item["custemorId"],
-                    "payed": item["payed"],
-                    "isDone": false,
-                    "paidway": "msb",
-                    "reason": this.state.reason[item["transaId"]],
-                    "date": "",
-                    "debtTime": item["date"] // only if it debt
-                });
-
-            item["date"] = (new Date()).getTime(); // date update
-            item["payed"] = 0; // changed
-            item["paidway"] = item["transaId"] + "_0"
-            item["reason"] = this.state.reason[item["transaId"]]
+            item["seccess"] = false;
+            item["reason"] = this.state.reason[item.transaId]
             return item;
-        }).map((item) => (this.props.update_bill(item)) ? item : { "payed": 0 }).map((item) => item.payed).reduce((a, b) => a + b, 0);
+        }).map((item) => {this.props.update_payment(item); return item;}).map((item) => item.payed).reduce((a, b) => a + b, 0);
+
+        const sum = this.state.allElements.filter((item) => item.isDone === "active" || item.isDone === true).map((item) => {
+            item = JSON.parse(JSON.stringify(item))
+            item["seccess"] = true;
+            return item;
+        }).map((item) => {this.props.update_payment(item); return item;}).map((item) => item.payed).reduce((a, b) => a + b, 0);
 
         let msb = JSON.parse(JSON.stringify(this.props.edit.msbEntery[0]));
         msb.status = "דווח בהצלחה";
+        msb["total"] = parseFloat(String(sum)).toFixed(2);
         msb.updateTime = (new Date()).getTime();
         this.props.update_msb(msb);
         this.context.close("עדכון מסב");

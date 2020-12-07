@@ -9,7 +9,6 @@ export default class Friends extends React.Component {
     }
     componentDidUpdate(prevProps) {
         if (this.props.edit !== prevProps.edit) {
-            console.log("dddd")
             this.props.clients[0].name = "אבגדהו";
         }
     }

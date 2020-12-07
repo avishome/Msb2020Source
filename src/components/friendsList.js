@@ -52,7 +52,7 @@ export default class MyTable extends React.Component {
     }
     filterValues(key, order) {
       if (order == "ALL") { this.setState({ elements: this.state.allElements }); return; }
-      console.log(key, order)
+
       const myData = [].concat(this.state.allElements)
       const filterdData = myData.filter(item => item[key] == order);
       this.setState({ elements: filterdData });

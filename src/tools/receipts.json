@@ -6,7 +6,7 @@
     "custemorId": 12345,
     "payed": 100,
     "isDone" : false,
-    "paidway": "msb",
+    "paidway": "abc",
     "reason" : "",
     "date": null
     },
@@ -17,7 +17,7 @@
         "custemorId": 12345,
         "payed": 200,
         "isDone" : false,
-        "paidway": "msb",
+        "paidway": "abc",
         "reason" : "",
         "date": null
         }

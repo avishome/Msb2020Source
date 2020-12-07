@@ -45,12 +45,12 @@ class HomeComponent extends React.Component {
             <div className="w-full lg:w-1/2 px-4 mb-4">
               <div className="h-full border rounded shadow">
                 <div className="flex items-center justify-between py-3 px-4 border-b">
-                  <h3 className="text-lg font-heading">ממתינים לפירעון</h3>
+                  <h3 className="text-lg font-heading">חיובים</h3>
                   <button
                     onClick={() => this.context.link("יצירת מסב")}
                     className="py-1 px-3 text-sm text-white font-semibold bg-green-500 rounded-full hover:bg-green-600 cursor-pointer"
                   >
-                    שליחה למס"ב
+                    גבייה
                   </button>
                 </div>
                 <div className="flex flex-col p-4">
@@ -65,7 +65,7 @@ class HomeComponent extends React.Component {
                   <button  onClick={()=>this.context.link("רשימת מסב")}
                     className="py-1 px-3 text-sm text-white font-semibold bg-green-500 rounded-full hover:bg-green-600 cursor-pointer"
                   >
-                    עוד
+                    כולם
                   </button>
                 </div>
                 <div className="flex flex-col p-4">

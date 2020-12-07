@@ -18,7 +18,7 @@ export default class Index extends React.Component {
       const oldValue = id.selected;
       this.state["id"] = oldValue.id;
       this.state["notes"] = oldValue.notes;
-      this.state["date"] = new Date(parseFloat(oldValue.date)).toLocaleDateString();
+      this.state["date"] = oldValue.date;
       this.state["price"] = oldValue.price;
       this.state["subject"] = oldValue.subject;
       this.state["custemors"] = JSON.parse(JSON.stringify(oldValue.custemors)).filter((item)=>!id.removes.includes(item));
@@ -32,37 +32,32 @@ export default class Index extends React.Component {
   static contextType = functionsContext;
   submit() {
     const s = this.state;
-    this.props.update_charge({
-      id: s.id,
-      subject: s.subject,
-      date: String(Date.parse(s.date.replaceAll(".","/").replace(/([0-9]+)\/([0-9]+)/,'$2/$1'))),
-      price: Number(s.price),
-      notes: s.notes
-    });
     //need find stiil selected, and remove canceled.
     let forAdd = s.custemors;
     let forRemove = []
     const id = this.props.edit;
     if(typeof(id)== "object" && id && !('length' in id) && id.selected){
       forAdd = s.custemors.filter((el)=> {
-        return true//!this.props.edit.selected.custemors.includes( el );
+        return !this.props.edit.selected.custemors.includes( el );
       } );
       forRemove = this.props.edit.selected.custemors.filter((item)=>!id.removes.includes(item)).filter( (el)=> {
         return !s.custemors.includes( el );
       } );
     }
-    forRemove.map((id)=>this.props.remove_bill({"transaId":s.id+"-"+id+"*1"}));
-    forAdd.map((id)=>this.props.update_bill(
-      {"transaId": s.id+"-"+id+"*1", // optional for take many piceses
-      "FatherBillId": s.id,
-      "msbId": -1,
-      "custemorId": id,
-      "payed": Number(s.price), // must not effect on this feild - only on msb creat
-      "isDone": false,
-      "paidway": "",
-      "reason": "",
-      "date": ""
-      }))
+    //forRemove.map((id)=>this.props.remove_bill({"transaId":s.id+"-"+id+"*1"}));
+    forAdd.map((id)=>this.props.update_payment(
+        {
+            "transaId":s.id+"-"+id+"*1",
+            "msbId": -1,
+            "custemorId": id,
+            "payed": Number(s.price),
+            "method" : s.subject,
+            "seccess": true,
+            "reason" : s.notes,
+            "date": String(Date.parse(s.date.replaceAll(".","/").replace(/([0-9]+)\/([0-9]+)/,'$2/$1'))),
+            "isDone": true,
+            }
+      ))
       return true;
   }
   changeP(key, e) {
@@ -82,12 +77,12 @@ export default class Index extends React.Component {
   render() {
     return (<div className="container mx-auto px-4">
       <section className="py-12 px-4">
-        <h2 className="text-3xl mb-8 text-center font-heading">יצירת חיוב חדש</h2>
+        <h2 className="text-3xl mb-8 text-center font-heading">תשלום חדש</h2>
         <div className="w-full max-w-2xl mx-auto mb-12">
           
             <div className="flex mb-4 -mx-2">
               <div className="w-1/2 px-2">
-                <input value={this.state.subject} onChange={(e) => this.changeP("subject", e)} className="appearance-none block w-full py-3 px-4 leading-tight text-gray-700 bg-gray-200 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none" type="text" placeholder="כותרת" />
+                <input value={this.state.subject} onChange={(e) => this.changeP("subject", e)} className="appearance-none block w-full py-3 px-4 leading-tight text-gray-700 bg-gray-200 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none" type="text" placeholder="אופן התשלום" />
               </div>
               <div className="w-1/2 px-2">
                 <input value={this.state.price} onChange={(e) => this.changeP("price", e)} className="appearance-none block w-full py-3 px-4 leading-tight text-gray-700 bg-gray-200 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none" type="text" placeholder="סכום בש'ח" />
@@ -140,7 +135,7 @@ export default class Index extends React.Component {
               </section>
             </div>
             <div>
-              <button onClick={() => this.submit()?this.context.close("חיוב חדש"):console.log("בעיה")} className="inline-block w-full py-4 px-8 leading-none text-white bg-indigo-500 hover:bg-indigo-600 rounded shadow">יצירת חיוב</button>
+              <button onClick={() => this.submit()?this.context.close("תשלום חדש"):console.log("בעיה")} className="inline-block w-full py-4 px-8 leading-none text-white bg-indigo-500 hover:bg-indigo-600 rounded shadow">תשלום</button>
             </div>
           
         </div>

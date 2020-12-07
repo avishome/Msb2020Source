@@ -7,6 +7,7 @@ import FriendsList from './friendsList'
 import Accuonts from './accountsPage'
 import Tabs from './Tabs'
 import NewCharge from './newCharge'
+import NewPay from './newPay'
 import NewMsb from './newMsb'
 import Search from './search'
 import UpdateMsb from './updateMsb'
@@ -40,7 +41,7 @@ export default class Index extends React.Component {
         if (bill1.length < 0) { console.log("problem - selector dont find"); ParseBill["custemors"] = []; return ParseBill; }
         const ParseBill = JSON.parse(JSON.stringify(bill1[0]));
         const relevantBill = billed.filter((bill) => bill["FatherBillId"] === ParseBill["id"]);
-        const afterMsb = relevantBill.filter((item)=>item.isDone!=false).map((item)=>item["custemorId"])
+        const afterMsb = relevantBill.filter((item) => item.isDone != false).map((item) => item["custemorId"])
         const jsonGroup = this.groupBy(relevantBill, "custemorId"); // maybe take a many items in same item - each item new line at biiled
         let output = []
         for (const index of Object.keys(jsonGroup)) {
@@ -48,13 +49,13 @@ export default class Index extends React.Component {
         }
         ParseBill["custemors"] = output;
 
-        return {"selected":ParseBill,"removes":afterMsb};
+        return { "selected": ParseBill, "removes": afterMsb };
     }
-    createArrDebts(billed,custemores){
+    createArrDebts(billed, custemores) {
         const ParseBill = JSON.parse(JSON.stringify(billed));
-        return ParseBill.filter((item)=>"debtTime" in item && item.payed > 0).map((item)=>{
+        return ParseBill.filter((item) => "debtTime" in item && item.payed > 0).map((item) => {
             item["custemore"] = this.idToCustemoreName(custemores, item.custemorId)[1];
-            item["status"] = (item.isDone) ? "נגבה מחדש" : (true)? "ממתין לגביה" : "שיהיה קוד ברור"
+            item["status"] = (item.isDone) ? "נגבה מחדש" : (true) ? "ממתין לגביה" : "שיהיה קוד ברור"
             return item;
         });
     }
@@ -73,10 +74,10 @@ export default class Index extends React.Component {
         }
         return ParseBill;
     }
-    parserMsbIndex(msbIndex, billed, custemores) {
+    parserMsbIndex(msbIndex, payments, custemores) {
         const ParseMsb = JSON.parse(JSON.stringify(msbIndex));
         for (var i = 0; i < ParseMsb.length; i++) {
-            const relevantBill = billed.filter((bill) => bill["msbId"] === ParseMsb[i]["id"]);
+            const relevantBill = payments.filter((bill) => bill["msbId"] === ParseMsb[i]["id"]);
             const jsonGroup = this.groupBy(relevantBill, "custemorId");
             let output = []
             for (const index of Object.keys(jsonGroup)) {
@@ -84,7 +85,7 @@ export default class Index extends React.Component {
                 const totalTaxes = value.reduce(function (sum, pay) {
                     return sum + pay.payed;
                 }, 0);
-                output.push([this.idToCustemoreName(custemores, index), Number((totalTaxes*1.0).toFixed(2))]);
+                output.push([this.idToCustemoreName(custemores, index), Number((totalTaxes * 1.0).toFixed(2))]);
             }
             ParseMsb[i]["reports"] = output;
         }
@@ -99,73 +100,139 @@ export default class Index extends React.Component {
             "הגדרות": () => null,
             "רשימת מסב": () => null,
             "רשימת לקוחות": () => null,
-            "חיוב חדש": () => (linkObj.params && linkObj.params.opCode == "clientNum") ? linkObj.params.clientNum : (linkObj.params && linkObj.params.opCode == "chargeNum")?  this.connectClientsTo1Bill(this.props.bills.filter((item) => item.id == linkObj.params.chargeNum), this.props.billed) : null,
+            "חיוב חדש": () => (linkObj.params && linkObj.params.opCode == "clientNum") ? linkObj.params.clientNum : (linkObj.params && linkObj.params.opCode == "chargeNum") ? this.connectClientsTo1Bill(this.props.bills.filter((item) => item.id == linkObj.params.chargeNum), this.props.billed) : null,
+            "תשלום חדש": () => (linkObj.params && linkObj.params.opCode == "clientNum") ? linkObj.params.clientNum : (linkObj.params && linkObj.params.opCode == "chargeNum") ? this.connectClientsTo1Bill(this.props.bills.filter((item) => item.id == linkObj.params.chargeNum), this.props.billed) : null,
             "דפי חשבון": () => (linkObj.params) ? linkObj.params : null,
             "יצירת מסב": () => null,
-            "עדכון מסב": () => (linkObj.params) ? {"billData":this.getReuqstPay(linkObj.params),"msbEntery":this.props.msbIndex.filter((item) => item.id == linkObj.params)}: null
+            "עדכון מסב": () => (linkObj.params) ? { "billData": this.getReuqstPay(linkObj.params), "msbEntery": this.props.msbIndex.filter((item) => item.id == linkObj.params) } : null
         }
         let tempPages = this.state.pages;
         tempPages[linkObj.page] = dic[linkObj.page]();
         this.setState({ pages: tempPages });
         this.scrollToRef();
     }
+    createDoneCharge(bills, billed){
+        return billed.filter((item)=>!item.isDone).map((item)=>{
+           item = JSON.parse(JSON.stringify(item));
+           const Father = bills.filter(x=>x.id==item.FatherBillId)
+           if(Father.length === 0) return item;
+           item["FatherBillName"] = Father[0].subject;
+           item["FatherDate"] = Father[0].date;
+           return item;
+        })
+    }
     getReuqstPay(fillter = 0) {
         // fillter is MsbId for display edit
-        const notDebtFunc = (item)=> !item.debtTime;
-        const fillterFunc = (fillter == 0)?((payed)=>{return !payed.isDone && payed.payed>0}):((payed)=>{return payed.isDone && payed.payed>0 && payed.msbId == fillter});
-        
-        return this.props.billed.filter((item)=>fillterFunc(item)).map((item) => {
-            item["company"] = this.idToCustemoreName(this.props.custemores,item.custemorId)[1] //need valid
+        const fillterFunc = ((payed) => { return payed.msbId == fillter });
 
-            const fatherBill = this.props.bills.filter((bill) => bill.id == item.FatherBillId);
-
-            if (!item.payed && fatherBill.length == 0) {
-                console.log("data not constintent", item.FatherBillId, "not exist");
-                item["payed"] = 0;
-                return JSON.parse(JSON.stringify(item));
-            }
-
-            if(fatherBill.length != 0) {
-                item["FatherBillName"] = fatherBill[0].subject;
-                item["about"] = fatherBill[0].notes;
-                item["FatherDate"] = fatherBill[0].date;
-            }
-
-            if (!item.payed) {
-                item["payed"] = fatherBill[0].price;
-                return JSON.parse(JSON.stringify(item));
-            }
+        return this.props.payments.filter((item) => fillterFunc(item)).map((item) => {
+            item["company"] = this.idToCustemoreName(this.props.custemores, item.custemorId)[1] //need valid
             return JSON.parse(JSON.stringify(item));
         });
     }
+    clacRestPay() {
+        let jsonGroup = this.groupBy(this.props.payments.map((item) => item), "custemorId")
+        const plus = Object.keys(jsonGroup).map((index) => {
+            const value = jsonGroup[index];
+            const totalTaxes = value.reduce(function (sum, pay) {
+                return sum + pay.payed;
+            }, 0);
+            return { "custemorId": index, payed: totalTaxes, "FatherBillName": "זכויות" }
+        })
+
+        jsonGroup = this.groupBy(this.props.billed.map((item) => item), "custemorId");
+        const minus = Object.keys(jsonGroup).map((index) => {
+            const value = jsonGroup[index];
+            const totalTaxes = value.reduce(function (sum, pay) {
+                return sum + pay.payed;
+            }, 0);
+            return { "custemorId": index, "payed": totalTaxes * -1, "FatherBillName": "חובות" }
+        })
+        const minusandplus = [...minus, ...plus]
+        jsonGroup = this.groupBy(minusandplus,"custemorId")
+        const total = Object.keys(jsonGroup).map((index) => {
+            const value = jsonGroup[index];
+            const totalTaxes = value.reduce(function (sum, pay) {
+                return sum + pay.payed;
+            }, 0);
+            return { "custemorId": index, "payed": totalTaxes * -1 }
+        })
+        return total.map((item) => {
+            item["company"] = this.idToCustemoreName(this.props.custemores, item.custemorId)[1] //need valid
+            return item;
+        });
+    }
+    debt_new_clac(bill,msb,payment,custemor) {
+        const paymentsFilter = (item) => {
+            if (item.seccess) return true;
+            if (item.msbId <= 0) return false;
+            if (!item.msbId) { console.log("msb without msb?"); return false; };
+            if (msb.filter((msb) => msb.id === item.msbId)[0].status === "דווח בהצלחה") return false;
+            return true;
+        };
+        const charges = bill;
+        let jsonGroup = this.groupBy(payment.filter(paymentsFilter).map((item) => item), "custemorId");
+        let jsonGroup2 = this.groupBy(charges.map((item) => item), "custemorId");
+        const total = Object.keys(jsonGroup).map((index) => {
+            const value = jsonGroup[index];
+            const totalTaxes = value.reduce(function (sum, pay) {
+                return sum + pay.payed;
+            }, 0);
+            return { "client": index, "count": totalTaxes }
+        })
+        const total2 = Object.keys(jsonGroup2).map((index) => {
+            const value = jsonGroup2[index];
+            const totalTaxes = value.reduce(function (sum, pay) {
+                return sum + pay.payed;
+            }, 0);
+            return { "client": index, "count": -totalTaxes }
+        })
+        const jsonGroup3 = this.groupBy([].concat(total, total2), "client");
+        const t = Object.keys(jsonGroup3).map((index) => {
+            const value = jsonGroup3[index];
+            const totalTaxes = value.reduce(function (sum, pay) {
+                return sum + pay.count;
+            }, 0);
+            return { "client": index, "count": -totalTaxes }
+        }).filter((item) => item.count > 0).map((item) => {
+            item["id"] = item.client;
+            item["custemore"] = item["company"] = this.idToCustemoreName(custemor, item.client)[1];
+            item["payed"] = item.count;
+            item["FatherBillName"] = "";
+            return item;
+        })
+        return t;
+    }
     close(page) {
-            if(page == "ראשי") { console.log("לא ניתן לסגור"); return; }
+        if (page == "ראשי") { console.log("לא ניתן לסגור"); return; }
         let tempPages = this.state.pages;
         delete tempPages[page];
         this.setState({ pages: tempPages });
     }
     render() {
         const dic = {
-            "ראשי": (<Home arrdebts={this.createArrDebts(this.props.billed,this.props.custemores)} arrbills={this.parserBillsClients(this.props.bills, this.props.billed, this.props.custemores)} msbIndex={this.parserMsbIndex(this.props.msbIndex, this.props.billed, this.props.custemores)}></Home>),
+
+            "ראשי": (<Home arrdebts={this.debt_new_clac(this.props.billed,this.props.msbIndex,this.props.payments, this.props.custemores)} arrbills={this.parserBillsClients(this.props.bills, this.props.billed, this.props.custemores)} msbIndex={this.parserMsbIndex(this.props.msbIndex,  this.props.payments,  this.props.custemores)}></Home>),
             "חבר חדש": <NewFriend clients={this.props.custemores} update_custemores={(data) => this.props.update_custemores(data)} link={(x) => this.link(x)} close={(x) => this.close(x)}></NewFriend>,
             "חברים מאקסל": <NewFriendByXls update_custemores={(data) => this.props.update_custemores(data)} arrCustemores={this.props.custemores}></NewFriendByXls>,
             "הגדרות": <Settings></Settings>,
-            "רשימת מסב": <SummrayTable arrData={this.parserMsbIndex(this.props.msbIndex, this.props.billed, this.props.custemores)} link={(x) => this.link(x)} type="msbs"></SummrayTable>,
+            "רשימת מסב": <SummrayTable arrData={this.parserMsbIndex(this.props.msbIndex, this.props.payments, this.props.custemores)} link={(x) => this.link(x)} type="msbs"></SummrayTable>,
             "רשימת לקוחות": <FriendsList arrCustemores={this.props.custemores}></FriendsList>,
-            "דפי חשבון": <Accuonts msbIndex={this.props.msbIndex} arrCustemores={this.props.custemores} arrbilled={this.props.billed}></Accuonts>,
+            "דפי חשבון": <Accuonts arrbills={this.props.bills} msbIndex={this.props.msbIndex} arrCustemores={this.props.custemores} arrbilled={this.props.billed} arrpayments={this.props.payments}></Accuonts>,
             "חיוב חדש": <NewCharge update_charge={(data) => this.props.update_charge(data)} update_bill={(data) => this.props.update_bill(data)} remove_bill={(data) => this.props.remove_bill(data)} arrCustemores={this.props.custemores}></NewCharge>,
-            "יצירת מסב": <NewMsb update_msb={(data) => this.props.update_msb(data)} update_bill={(data) => this.props.update_bill(data)} arrCustemoreBills={this.getReuqstPay()}></NewMsb>,
-            "עדכון מסב": <UpdateMsb update_msb={(data) => this.props.update_msb(data)} update_bill={(data) => this.props.update_bill(data)} arrCustemoreBills={this.getReuqstPay()}></UpdateMsb>
+            "תשלום חדש": <NewPay update_payment={(data) => this.props.update_payment(data)} update_charge={(data) => this.props.update_charge(data)} update_bill={(data) => this.props.update_bill(data)} remove_bill={(data) => this.props.remove_bill(data)} arrCustemores={this.props.custemores}></NewPay>,
+            "יצירת מסב": <NewMsb update_payment={(data) => this.props.update_payment(data)} arrbills={this.createDoneCharge(this.props.bills, this.props.billed)} update_msb={(data) => this.props.update_msb(data)} update_payment={(data) => this.props.update_payment(data)} update_bill={(data) => this.props.update_bill(data)} arrCustemoreBills={this.debt_new_clac(this.props.billed,this.props.msbIndex,this.props.payments, this.props.custemores)}></NewMsb>,
+            "עדכון מסב": <UpdateMsb remove_payment={(data)=>this.props.remove_payment(data)} update_msb={(data) => this.props.update_msb(data)} update_payment={(data) => this.props.update_payment(data)} update_bill={(data) => this.props.update_bill(data)} arrCustemoreBills={this.getReuqstPay()}></UpdateMsb>
         }
         return (
-            
+
             <div className="text-body font-body">
                 <div>
                     <div className="w-full h-64" style={{ marginBottom: '-5%' }}>
                         <div className=" mx-auto">
                             <button onClick={() => this.link("הגדרות")} className="py-6 px-3 text-sm text-black font-semibold bg-gray-300 rounded-bl-full hover:bg-gray-200 cursor-pointer">
                                 <img src={cog} />
-                                
+
                             </button>
                         </div>
                     </div>
@@ -184,7 +251,7 @@ export default class Index extends React.Component {
 
                             </div>
                         </div>
-                        <functionsContext.Provider value={{ link: (x) => this.link(x), close: (x) => this.close(x), createMsb: (x)=>this.props.createMsb(x) }}>
+                        <functionsContext.Provider value={{ link: (x) => this.link(x), close: (x) => this.close(x), createMsb: (x) => this.props.createMsb(x), createReceipt: (x) => this.props.createReceipt(x) }}>
                             <Tabs sons={this.state.pages}
                                 render={
                                     (parms) => (
